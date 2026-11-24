@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIMCORE — Контакты и служба поддержки</title>
+  <meta name="description" content="Контакты ООО «АИМКОРЕ»: адрес в г. Оренбург, телефон, email поддержки, социальные сети и форма обратной связи.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Подключение стилей проекта (пока пустые файлы по заданию День 8-9) -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка сайта и навигация -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Главная навигация">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Логотип AIMCORE" class="logo-img">
+          <span class="logo-text">AIMCORE</span>
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+          <li class="nav-item"><a href="catalog.html" class="nav-link">Каталог</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">О нас</a></li>
+          <li class="nav-item"><a href="contacts.html" class="nav-link active">Контакты</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="catalog.html" class="btn btn-primary">К серверам</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заглавная секция контактов -->
+    <section class="contacts-hero-section">
+      <div class="container">
+        <h1 class="page-title">Контакты и служба поддержки</h1>
+        <p class="page-subtitle">Мы на связи 24/7. Обращайтесь по любым вопросам работы серверов, оплаты подписки и сотрудничества.</p>
+      </div>
+    </section>
+
+    <!-- Контактные данные и реквизиты -->
+    <section class="contacts-info-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Контактная информация</h2>
+          <p class="section-description">Официальные реквизиты и каналы связи с ООО «АИМКОРЕ»</p>
+        </header>
+
+        <div class="contacts-grid">
+          <article class="contact-card">
+            <h3 class="contact-card-title">Юридическая информация</h3>
+            <ul class="contact-card-list">
+              <li><strong>Организация:</strong> Общество с ограниченной ответственностью «АИМКОРЕ»</li>
+              <li><strong>ОГРН:</strong> 1235600012345</li>
+              <li><strong>ИНН / КПП:</strong> 5610123456 / 561001001</li>
+              <li><strong>Генеральный директор:</strong> Косумов Я. Р.</li>
+            </ul>
+          </article>
+
+          <article class="contact-card">
+            <h3 class="contact-card-title">Фактический адрес офиса</h3>
+            <address class="contact-address">
+              <p>460000, Российская Федерация,</p>
+              <p>Оренбургская область, г. Оренбург,</p>
+              <p>проспект Гагарина, д. 62, офис 79.</p>
+            </address>
+            <p class="work-hours"><strong>График работы офиса:</strong> Пн–Пт с 09:00 до 18:00 (МСК+2)</p>
+          </article>
+
+          <article class="contact-card">
+            <h3 class="contact-card-title">Электронная почта и телефон</h3>
+            <ul class="contact-card-list">
+              <li><strong>Техподдержка:</strong> <a href="mailto:support@aimcore.gg">support@aimcore.gg</a></li>
+              <li><strong>Для партнеров:</strong> <a href="mailto:partners@aimcore.gg">partners@aimcore.gg</a></li>
+              <li><strong>Финансовый отдел:</strong> <a href="mailto:billing@aimcore.gg">billing@aimcore.gg</a></li>
+              <li><strong>Телефон горячей линии:</strong> <a href="tel:+73532998877">+7 (3532) 99-88-77</a></li>
+            </ul>
+          </article>
+
+          <article class="contact-card">
+            <h3 class="contact-card-title">Социальные сети и комьюнити</h3>
+            <ul class="contact-card-list">
+              <li><strong>Telegram канал:</strong> <a href="#">@aimcore_official</a></li>
+              <li><strong>Чат поддержки в Telegram:</strong> <a href="#">@aimcore_support</a></li>
+              <li><strong>Discord сервер:</strong> <a href="#">discord.gg/aimcore</a></li>
+              <li><strong>Сообщество ВКонтакте:</strong> <a href="#">vk.com/aimcore_cs2</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section class="feedback-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Форма обратной связи</h2>
+          <p class="section-description">Заполните поля формы, и дежурный администратор свяжется с вами в течение 15 минут</p>
+        </header>
+
+        <form class="feedback-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Ваше имя или никнейм *</label>
+              <input type="text" id="contact-name" name="name" required placeholder="Например: s1mple или Иван">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-identifier">Email или Telegram для ответа *</label>
+              <input type="text" id="contact-identifier" name="contact" required placeholder="@username или mail@example.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-topic">Тема обращения *</label>
+            <select id="contact-topic" name="topic" required>
+              <option value="">-- Выберите тему обращения --</option>
+              <option value="tech">Техническая проблема на сервере (пинг, вылеты, регистрация)</option>
+              <option value="billing">Вопросы по оплате и тарифам подписки</option>
+              <option value="cheater">Жалоба на подозрительного игрока или токсичное поведение</option>
+              <option value="cooperation">Сотрудничество, турниры и реклама</option>
+              <option value="other">Прочие вопросы и предложения</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Подробное описание проблемы или вопроса *</label>
+            <textarea id="contact-message" name="message" rows="6" required placeholder="Опишите вашу проблему, укажите IP сервера или никнейм игрока при необходимости..."></textarea>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="agreement" required>
+              <span>Я подтверждаю согласие на обработку персональных данных в соответствии с политикой конфиденциальности ООО «АИМКОРЕ» *</span>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">Отправить обращение</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Схема проезда / Карта -->
+    <section class="map-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Схема проезда к офису</h2>
+          <p class="section-description">г. Оренбург, проспект Гагарина, д. 62, офис 79 (БЦ «Гагаринский»)</p>
+        </header>
+
+        <div class="map-container">
+          <p class="map-info">Офис ООО «АИМКОРЕ» расположен на 7 этаже делового центра. Остановка общественного транспорта: «Улица Мира» / «Национальная деревня». Проход через центральное бюро пропусков при наличии документа, удостоверяющего личность.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Логотип AIMCORE" class="logo-img">
+            <span class="logo-text">AIMCORE</span>
+          </a>
+          <p class="footer-desc">Служба поддержки и контактные данные соревновательной платформы ООО «АИМКОРЕ».</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Навигация в подвале">
+          <h3 class="footer-heading">Разделы сайта</h3>
+          <ul class="footer-list">
+            <li><a href="index.html">Главная страница</a></li>
+            <li><a href="catalog.html">Каталог серверов</a></li>
+            <li><a href="about.html">О платформе</a></li>
+            <li><a href="contacts.html">Контакты и поддержка</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contacts">
+          <h3 class="footer-heading">Связь с нами</h3>
+          <p>Email: <a href="mailto:support@aimcore.gg">support@aimcore.gg</a></p>
+          <p>Адрес: г. Оренбург, пр-кт Гагарина, д. 62, офис 79</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 ООО «АИМКОРЕ». Все права защищены.</p>
+        <p class="disclaimer">Counter-Strike, CS2 и логотип Valve являются товарными знаками корпорации Valve. Платформа AIMCORE не аффилирована с Valve Corporation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Подключение скрипта проекта (пока пустой файл по заданию День 8-9) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

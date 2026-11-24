@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIMCORE — Каталог серверов и тренировочных программ CS2</title>
+  <meta name="description" content="Каталог игровых серверов AIMCORE: Retake Classic, DM FFA, Prefire Practice, Duels 1v1, AWP Battles и тарифные планы подписки.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Подключение стилей проекта (пока пустые файлы по заданию День 8-9) -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка сайта и навигация -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Главная навигация">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Логотип AIMCORE" class="logo-img">
+          <span class="logo-text">AIMCORE</span>
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+          <li class="nav-item"><a href="catalog.html" class="nav-link active">Каталог</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">О нас</a></li>
+          <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contacts.html" class="btn btn-primary">Поддержка</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заголовок каталога -->
+    <section class="catalog-header-section">
+      <div class="container">
+        <h1 class="page-title">Каталог тренировочных серверов и программ</h1>
+        <p class="page-subtitle">Выбирайте подходящий игровой режим, карту и локацию для продуктивной тренировки в CS2</p>
+      </div>
+    </section>
+
+    <!-- Фильтры каталога -->
+    <section class="catalog-filters-section">
+      <div class="container">
+        <header class="filters-header">
+          <h2 class="filters-title">Фильтрация игровых площадок</h2>
+        </header>
+
+        <form class="filters-form" action="#" method="get">
+          <div class="filter-group">
+            <label for="filter-mode">Режим игры:</label>
+            <select id="filter-mode" name="mode">
+              <option value="all">Все режимы</option>
+              <option value="retake">Retake Classic (128T)</option>
+              <option value="dm">Deathmatch FFA</option>
+              <option value="prefire">Prefire Practice</option>
+              <option value="duels">1v1 Duels Arena</option>
+              <option value="awp">AWP Only</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-map">Карта:</label>
+            <select id="filter-map" name="map">
+              <option value="all">Все соревновательные карты</option>
+              <option value="mirage">de_mirage</option>
+              <option value="inferno">de_inferno</option>
+              <option value="dust2">de_dust2</option>
+              <option value="nuke">de_nuke</option>
+              <option value="anubis">de_anubis</option>
+              <option value="ancient">de_ancient</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-location">Локация:</label>
+            <select id="filter-location" name="location">
+              <option value="all">Все регионы</option>
+              <option value="msk">Москва (MSK)</option>
+              <option value="spb">Санкт-Петербург (SPB)</option>
+              <option value="fra">Франкфурт (FRA)</option>
+            </select>
+          </div>
+
+          <div class="filter-actions">
+            <button type="submit" class="btn btn-primary">Применить фильтр</button>
+            <button type="reset" class="btn btn-outline">Сбросить</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Список серверов (товаров/услуг платформы) -->
+    <section class="catalog-grid-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Доступные серверы CS2</h2>
+          <p class="section-description">Мониторинг слотов и статуса подключения обновляется в реальном времени</p>
+        </header>
+
+        <div class="servers-grid">
+          <article class="server-card">
+            <header class="server-header">
+              <span class="badge badge-online">Онлайн</span>
+              <span class="server-location">Москва, РФ</span>
+            </header>
+            <h3 class="server-name">[RU] AIMCORE #1 | RETAKE CLASSIC [128T]</h3>
+            <ul class="server-details">
+              <li><strong>Карта:</strong> de_mirage</li>
+              <li><strong>Слоты:</strong> 9 / 10 игроков</li>
+              <li><strong>Тикрейт:</strong> 128 tick</li>
+              <li><strong>Средний пинг:</strong> 12 мс</li>
+            </ul>
+            <p class="server-ip"><code>connect 185.120.45.10:27015</code></p>
+            <div class="server-actions">
+              <button type="button" class="btn btn-primary">Подключиться</button>
+              <button type="button" class="btn btn-outline">Скопировать IP</button>
+            </div>
+          </article>
+
+          <article class="server-card">
+            <header class="server-header">
+              <span class="badge badge-online">Онлайн</span>
+              <span class="server-location">Москва, РФ</span>
+            </header>
+            <h3 class="server-name">[RU] AIMCORE #2 | DM FFA PISTOL ONLY</h3>
+            <ul class="server-details">
+              <li><strong>Карта:</strong> de_dust2</li>
+              <li><strong>Слоты:</strong> 14 / 16 игроков</li>
+              <li><strong>Тикрейт:</strong> 128 tick</li>
+              <li><strong>Средний пинг:</strong> 14 мс</li>
+            </ul>
+            <p class="server-ip"><code>connect 185.120.45.11:27015</code></p>
+            <div class="server-actions">
+              <button type="button" class="btn btn-primary">Подключиться</button>
+              <button type="button" class="btn btn-outline">Скопировать IP</button>
+            </div>
+          </article>
+
+          <article class="server-card">
+            <header class="server-header">
+              <span class="badge badge-online">Онлайн</span>
+              <span class="server-location">Санкт-Петербург, РФ</span>
+            </header>
+            <h3 class="server-name">[RU] AIMCORE #3 | PREFIRE PRACTICE BOTS</h3>
+            <ul class="server-details">
+              <li><strong>Карта:</strong> de_inferno</li>
+              <li><strong>Слоты:</strong> 6 / 10 игроков</li>
+              <li><strong>Тикрейт:</strong> 128 tick</li>
+              <li><strong>Средний пинг:</strong> 16 мс</li>
+            </ul>
+            <p class="server-ip"><code>connect 185.120.45.12:27015</code></p>
+            <div class="server-actions">
+              <button type="button" class="btn btn-primary">Подключиться</button>
+              <button type="button" class="btn btn-outline">Скопировать IP</button>
+            </div>
+          </article>
+
+          <article class="server-card">
+            <header class="server-header">
+              <span class="badge badge-online">Онлайн</span>
+              <span class="server-location">Франкфурт, Германия</span>
+            </header>
+            <h3 class="server-name">[EU] AIMCORE #4 | 1v1 DUELS ARENA AIM</h3>
+            <ul class="server-details">
+              <li><strong>Карта:</strong> aim_redline</li>
+              <li><strong>Слоты:</strong> 8 / 12 игроков</li>
+              <li><strong>Тикрейт:</strong> 128 tick</li>
+              <li><strong>Средний пинг:</strong> 28 мс</li>
+            </ul>
+            <p class="server-ip"><code>connect 194.87.68.20:27015</code></p>
+            <div class="server-actions">
+              <button type="button" class="btn btn-primary">Подключиться</button>
+              <button type="button" class="btn btn-outline">Скопировать IP</button>
+            </div>
+          </article>
+
+          <article class="server-card">
+            <header class="server-header">
+              <span class="badge badge-online">Онлайн</span>
+              <span class="server-location">Москва, РФ</span>
+            </header>
+            <h3 class="server-name">[RU] AIMCORE #5 | RETAKE EXECUTE PRO</h3>
+            <ul class="server-details">
+              <li><strong>Карта:</strong> de_nuke</li>
+              <li><strong>Слоты:</strong> 10 / 10 игроков</li>
+              <li><strong>Тикрейт:</strong> 128 tick</li>
+              <li><strong>Средний пинг:</strong> 15 мс</li>
+            </ul>
+            <p class="server-ip"><code>connect 185.120.45.13:27015</code></p>
+            <div class="server-actions">
+              <button type="button" class="btn btn-primary">Подключиться</button>
+              <button type="button" class="btn btn-outline">Скопировать IP</button>
+            </div>
+          </article>
+
+          <article class="server-card">
+            <header class="server-header">
+              <span class="badge badge-online">Онлайн</span>
+              <span class="server-location">Москва, РФ</span>
+            </header>
+            <h3 class="server-name">[RU] AIMCORE #6 | AWP ONLY SNIPER BATTLE</h3>
+            <ul class="server-details">
+              <li><strong>Карта:</strong> awp_india</li>
+              <li><strong>Слоты:</strong> 12 / 16 игроков</li>
+              <li><strong>Тикрейт:</strong> 128 tick</li>
+              <li><strong>Средний пинг:</strong> 18 мс</li>
+            </ul>
+            <p class="server-ip"><code>connect 185.120.45.14:27015</code></p>
+            <div class="server-actions">
+              <button type="button" class="btn btn-primary">Подключиться</button>
+              <button type="button" class="btn btn-outline">Скопировать IP</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция тарифов и подписок -->
+    <section class="tariffs-section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Тарифные планы и подписки</h2>
+          <p class="section-description">Откройте полный доступ ко всем функциям и расширенной аналитике платформы</p>
+        </header>
+
+        <div class="tariffs-grid">
+          <article class="tariff-card">
+            <header class="tariff-header">
+              <h3 class="tariff-title">Базовый (Free)</h3>
+              <p class="tariff-price">0 ₽ <span>/ навсегда</span></p>
+            </header>
+            <ul class="tariff-features">
+              <li>Доступ ко всем открытым DM и Retake серверам</li>
+              <li>Базовая статистика попаданий и рейтинга</li>
+              <li>Стандартная очередь при заполнении серверов</li>
+            </ul>
+            <button type="button" class="btn btn-outline">Текущий тариф</button>
+          </article>
+
+          <article class="tariff-card tariff-featured">
+            <header class="tariff-header">
+              <span class="badge badge-popular">Популярный</span>
+              <h3 class="tariff-title">PRO Player</h3>
+              <p class="tariff-price">299 ₽ <span>/ месяц</span></p>
+            </header>
+            <ul class="tariff-features">
+              <li>Приоритетный вход на серверы без очереди (резерв-слот)</li>
+              <li>Полная статистика точности, времени реакции и спрея</li>
+              <li>Доступ к закрытым 128T серверам и эксклюзивным prefire-картам</li>
+              <li>Персональный значок подписчика в профиле</li>
+            </ul>
+            <button type="button" class="btn btn-primary">Оформить подписку</button>
+          </article>
+
+          <article class="tariff-card">
+            <header class="tariff-header">
+              <h3 class="tariff-title">Elite Coach</h3>
+              <p class="tariff-price">599 ₽ <span>/ месяц</span></p>
+            </header>
+            <ul class="tariff-features">
+              <li>Все преимущества тарифа PRO Player</li>
+              <li>AI-тренер с персональным разбором каждого матча</li>
+              <li>Еженедельный индивидуальный план тренировок</li>
+              <li>Закрытый Discord-канал с киберспортивными тренерами</li>
+            </ul>
+            <button type="button" class="btn btn-primary">Оформить Elite</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Логотип AIMCORE" class="logo-img">
+            <span class="logo-text">AIMCORE</span>
+          </a>
+          <p class="footer-desc">Каталог игровых тренировочных серверов CS2 и аналитических инструментов ООО «АИМКОРЕ».</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Навигация в подвале">
+          <h3 class="footer-heading">Разделы сайта</h3>
+          <ul class="footer-list">
+            <li><a href="index.html">Главная страница</a></li>
+            <li><a href="catalog.html">Каталог серверов</a></li>
+            <li><a href="about.html">О платформе</a></li>
+            <li><a href="contacts.html">Контакты и поддержка</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contacts">
+          <h3 class="footer-heading">Связь с нами</h3>
+          <p>Email: <a href="mailto:support@aimcore.gg">support@aimcore.gg</a></p>
+          <p>Адрес: г. Оренбург, пр-кт Гагарина, д. 62, офис 79</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 ООО «АИМКОРЕ». Все права защищены.</p>
+        <p class="disclaimer">Counter-Strike, CS2 и логотип Valve являются товарными знаками корпорации Valve. Платформа AIMCORE не аффилирована с Valve Corporation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Подключение скрипта проекта (пока пустой файл по заданию День 8-9) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
