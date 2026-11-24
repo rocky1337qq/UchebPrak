@@ -4,268 +4,532 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIMCORE — Платформа для тренировки стрельбы в CS2</title>
-  <meta name="description" content="AIMCORE — платформа соревновательной подготовки игроков в CS2. Тренируйся на серверах 128 тикрейт, анализируй ошибки и играй с PRO-игроками.">
+  <meta name="description" content="Тренируйся. Доминируй. Побеждай. AIMCORE — платформа для тренировки стрельбы в CS2 с PRO-игроками, анализом тренера и персональными тренировками.">
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Подключение стилей проекта (пока пустые файлы по заданию День 8-9) -->
+  <!-- Google Fonts: Russo One & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Шапка сайта и основная навигация -->
-  <header class="header">
-    <div class="container">
-      <nav class="navbar" aria-label="Главная навигация">
-        <a href="index.html" class="logo">
-          <img src="images/logo.png" alt="Логотип AIMCORE" class="logo-img">
-          <span class="logo-text">AIMCORE</span>
+  <!-- Header / Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="nav-group nav-left">
+        <a href="index.html" class="nav-link active">Главная</a>
+        <a href="catalog.html" class="nav-link">Каталог</a>
+        <a href="about.html" class="nav-link">О нас</a>
+      </div>
+
+      <a href="index.html" class="brand-logo" aria-label="AIMCORE Главная">
+        <img src="images/logo.png" alt="AIMCORE Logo" class="logo-img">
+      </a>
+
+      <div class="nav-group nav-right">
+        <a href="contacts.html" class="nav-link">Контакты</a>
+        <a href="catalog.html" class="nav-link nav-btn-profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Кабинет
         </a>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
-          <li class="nav-item"><a href="catalog.html" class="nav-link">Каталог</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">О нас</a></li>
-          <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
-        </ul>
-        <div class="nav-actions">
-          <a href="catalog.html" class="btn btn-primary">Начать тренировку</a>
-        </div>
-      </nav>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Открыть меню">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile dropdown menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mobile-link active">Главная</a>
+      <a href="catalog.html" class="mobile-link">Каталог</a>
+      <a href="contacts.html" class="mobile-link">Контакты</a>
+      <a href="about.html" class="mobile-link">О нас</a>
+      <a href="catalog.html" class="mobile-link">Личный кабинет</a>
     </div>
   </header>
 
-  <!-- Основное содержимое страницы -->
   <main>
+    <!-- Hero Section with Fullscreen Background Highlight Video -->
+    <section class="hero-section" id="hero">
+      <div class="hero-backdrop">
+        <!-- High-speed CS2 Gameplay Video Background (Valve CDN + Local fallback) -->
+        <video 
+          class="video-background" 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          poster="images/hero-bg.png"
+          preload="auto">
+          <source src="https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/cs2/thumbnails/weapons.webm" type="video/webm">
+          <source src="https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/cs2/smokes_vid1.webm" type="video/webm">
+          
+        </video>
 
-    <!-- Главная секция (Hero) -->
-    <section class="hero-section">
+        <!-- Dark cinematic overlay to ensure perfect contrast and text readability -->
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <h1 class="hero-title">
+          <span>Тренируйся.</span>
+          <span>Доминируй.</span>
+          <span>Побеждай.</span>
+        </h1>
+        <p class="hero-subtitle">
+          AIMCORE — платформа для тренировки стрельбы в CS2. Прокачивай аим и реакцию, не тратя время на поиск нужных карт и настройку конфигов
+        </p>
+
+        <div class="hero-actions">
+          <a href="catalog.html" class="btn btn-primary">Начать тренировку</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pro Players Section (Infinite Marquee floating right) -->
+    <section class="pro-section" id="pro-players">
       <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">Тренируйся. Доминируй. Побеждай.</h1>
-          <p class="hero-subtitle">AIMCORE — передовая платформа для соревновательной подготовки игроков в CS2 с поддержкой 128 тикрейта, расширенной аналитикой и сценариями профессионалов.</p>
-          <div class="hero-buttons">
-            <a href="catalog.html" class="btn btn-primary">Выбрать сервер</a>
-            <a href="about.html" class="btn btn-outline">Узнать о платформе</a>
+        <div class="section-header text-center">
+          <h2 class="section-title">
+            Тренируйся с<br><span class="accent-title">PRO-ИГРОКАМИ</span>
+          </h2>
+          <p class="section-subtitle">
+            На AIMCORE вы можете встретить друзей, знакомых, новых тимметов а также кибериспортсменов
+          </p>
+        </div>
+      </div>
+
+      <!-- Ticker Marquee Wrapper -->
+      <div class="pro-marquee-container">
+        <div class="pro-marquee-track" id="pro-marquee-track">
+          <!-- First Set of 14 Cards -->
+          <article class="pro-card offset-low" data-player="molodoy" data-hours="570 ч">
+            <span class="player-name">molodoy</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-molodoy.png" alt="molodoy" class="player-photo">
+            </div>
+            <div class="player-hours-badge">570 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="ropz" data-hours="810 ч">
+            <span class="player-name">ropz</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-ropz.png" alt="ropz" class="player-photo">
+            </div>
+            <div class="player-hours-badge">810 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="b1t" data-hours="430 ч">
+            <span class="player-name">b1t</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-b1t.png" alt="b1t" class="player-photo">
+            </div>
+            <div class="player-hours-badge">430 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="magnojez" data-hours="900 ч">
+            <span class="player-name">magnojez</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-magnojez.png" alt="magnojez" class="player-photo">
+            </div>
+            <div class="player-hours-badge">900 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="sh1ro" data-hours="250 ч">
+            <span class="player-name">sh1ro</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-sh1ro.png" alt="sh1ro" class="player-photo">
+            </div>
+            <div class="player-hours-badge">250 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="kyousuke" data-hours="001 ч">
+            <span class="player-name">kyousuke</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-kyousuke.png" alt="kyousuke" class="player-photo">
+            </div>
+            <div class="player-hours-badge">001 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="khaN" data-hours="550 ч">
+            <span class="player-name">khaN</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-khan.png" alt="khaN" class="player-photo">
+            </div>
+            <div class="player-hours-badge">550 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="mezii" data-hours="450 ч">
+            <span class="player-name">mezii</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-mezii.png" alt="mezii" class="player-photo">
+            </div>
+            <div class="player-hours-badge">450 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="s1mple" data-hours="999 ч">
+            <span class="player-name">s1mple</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-s1mple.png" alt="s1mple" class="player-photo">
+            </div>
+            <div class="player-hours-badge">999 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="blameF" data-hours="350 ч">
+            <span class="player-name">blameF</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-blamef.png" alt="blameF" class="player-photo">
+            </div>
+            <div class="player-hours-badge">350 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="Zywoo" data-hours="750 ч">
+            <span class="player-name">Zywoo</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-zywoo.png" alt="Zywoo" class="player-photo">
+            </div>
+            <div class="player-hours-badge">750 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="donk" data-hours="800 ч">
+            <span class="player-name">donk</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-donk.png" alt="donk" class="player-photo">
+            </div>
+            <div class="player-hours-badge">800 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="m0nesy" data-hours="510 ч">
+            <span class="player-name">m0nesy</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-m0nesy.png" alt="m0nesy" class="player-photo">
+            </div>
+            <div class="player-hours-badge">510 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="w0nderful" data-hours="450 ч">
+            <span class="player-name">w0nderful</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-wonderful.png" alt="w0nderful" class="player-photo">
+            </div>
+            <div class="player-hours-badge">450 ч</div>
+          </div>
+
+          <!-- Duplicate Set for Seamless Loop -->
+          <article class="pro-card offset-low" data-player="molodoy" data-hours="570 ч">
+            <span class="player-name">molodoy</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-molodoy.png" alt="molodoy" class="player-photo">
+            </div>
+            <div class="player-hours-badge">570 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="ropz" data-hours="810 ч">
+            <span class="player-name">ropz</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-ropz.png" alt="ropz" class="player-photo">
+            </div>
+            <div class="player-hours-badge">810 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="b1t" data-hours="430 ч">
+            <span class="player-name">b1t</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-b1t.png" alt="b1t" class="player-photo">
+            </div>
+            <div class="player-hours-badge">430 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="magnojez" data-hours="900 ч">
+            <span class="player-name">magnojez</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-magnojez.png" alt="magnojez" class="player-photo">
+            </div>
+            <div class="player-hours-badge">900 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="sh1ro" data-hours="250 ч">
+            <span class="player-name">sh1ro</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-sh1ro.png" alt="sh1ro" class="player-photo">
+            </div>
+            <div class="player-hours-badge">250 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="kyousuke" data-hours="001 ч">
+            <span class="player-name">kyousuke</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-kyousuke.png" alt="kyousuke" class="player-photo">
+            </div>
+            <div class="player-hours-badge">001 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="khaN" data-hours="550 ч">
+            <span class="player-name">khaN</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-khan.png" alt="khaN" class="player-photo">
+            </div>
+            <div class="player-hours-badge">550 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="mezii" data-hours="450 ч">
+            <span class="player-name">mezii</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-mezii.png" alt="mezii" class="player-photo">
+            </div>
+            <div class="player-hours-badge">450 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="s1mple" data-hours="999 ч">
+            <span class="player-name">s1mple</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-s1mple.png" alt="s1mple" class="player-photo">
+            </div>
+            <div class="player-hours-badge">999 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="blameF" data-hours="350 ч">
+            <span class="player-name">blameF</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-blamef.png" alt="blameF" class="player-photo">
+            </div>
+            <div class="player-hours-badge">350 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="Zywoo" data-hours="750 ч">
+            <span class="player-name">Zywoo</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-zywoo.png" alt="Zywoo" class="player-photo">
+            </div>
+            <div class="player-hours-badge">750 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="donk" data-hours="800 ч">
+            <span class="player-name">donk</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-donk.png" alt="donk" class="player-photo">
+            </div>
+            <div class="player-hours-badge">800 ч</div>
+          </div>
+
+          <article class="pro-card offset-low" data-player="m0nesy" data-hours="510 ч">
+            <span class="player-name">m0nesy</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-m0nesy.png" alt="m0nesy" class="player-photo">
+            </div>
+            <div class="player-hours-badge">510 ч</div>
+          </div>
+
+          <article class="pro-card offset-high" data-player="w0nderful" data-hours="450 ч">
+            <span class="player-name">w0nderful</span>
+            <div class="player-avatar-wrap">
+              <img src="images/player-wonderful.png" alt="w0nderful" class="player-photo">
+            </div>
+            <div class="player-hours-badge">450 ч</div>
           </div>
         </div>
-        <div class="hero-media">
-          <img src="images/hero-bg.png" alt="Counter-Strike 2 тренировочная база" class="hero-image">
+      </div>
+    </section>
+
+    <!-- Features Showcase Section (Compact & Proportional) -->
+    <section class="features-section" id="features">
+      <div class="container features-container">
+        <!-- Feature 1: Online status -->
+        <div class="feature-row">
+          <div class="feature-widget-box">
+            <img src="images/widget-online.png" alt="Смотри кто играет онлайн" class="feature-img">
+          </div>
+          <div class="feature-text-box">
+            <h3 class="feature-title">Смотри кто играет онлайн</h3>
+            <p class="feature-desc">Узнавай, на каких режимах и серверах они сейчас играют, и подключайся к ним</p>
+          </div>
+        </div>
+
+        <!-- Feature 2: Invite to lobby -->
+        <div class="feature-row feature-row-reverse">
+          <div class="feature-text-box feature-text-right">
+            <h3 class="feature-title">Приглашай играть</h3>
+            <p class="feature-desc">Зови друзей прямо с сайта: в лобби или сразу на сервер</p>
+          </div>
+          <div class="feature-widget-box">
+            <img src="images/widget-invite.png" alt="Приглашай играть" class="feature-img">
+          </div>
+        </div>
+
+        <!-- Feature 3: Leaderboard -->
+        <div class="feature-row">
+          <div class="feature-widget-box">
+            <img src="images/widget-leaderboard.png" alt="Соревнуйся в лидерборде" class="feature-img">
+          </div>
+          <div class="feature-text-box">
+            <h3 class="feature-title">Соревнуйся в лидерборде</h3>
+            <p class="feature-desc">Ставь рекорды и сравнивай себя с другими игроками</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Секция с PRO-игроками -->
-    <section class="pro-section">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Тренируйся с PRO-игроками</h2>
-          <p class="section-description">На серверах AIMCORE регулярно оттачивают стрельбу и реакцию звезды мировой киберспортивной сцены</p>
-        </header>
-
-        <div class="pro-grid">
-          <article class="pro-card">
-            <div class="player-avatar-wrap">
-              <img src="images/products/player-s1mple.png" alt="s1mple" class="player-avatar">
-            </div>
-            <h3 class="player-name">s1mple</h3>
-            <p class="player-team">Легенда CS сцены</p>
-            <span class="player-stat">Наиграно: 1 200+ ч</span>
-          </article>
-
-          <article class="pro-card">
-            <div class="player-avatar-wrap">
-              <img src="images/products/player-donk.png" alt="donk" class="player-avatar">
-            </div>
-            <h3 class="player-name">donk</h3>
-            <p class="player-team">Team Spirit</p>
-            <span class="player-stat">Наиграно: 940 ч</span>
-          </article>
-
-          <article class="pro-card">
-            <div class="player-avatar-wrap">
-              <img src="images/products/player-m0nesy.png" alt="m0NESY" class="player-avatar">
-            </div>
-            <h3 class="player-name">m0NESY</h3>
-            <p class="player-team">G2 Esports</p>
-            <span class="player-stat">Наиграно: 890 ч</span>
-          </article>
-
-          <article class="pro-card">
-            <div class="player-avatar-wrap">
-              <img src="images/products/player-ropz.png" alt="ropz" class="player-avatar">
-            </div>
-            <h3 class="player-name">ropz</h3>
-            <p class="player-team">FaZe Clan</p>
-            <span class="player-stat">Наиграно: 810 ч</span>
-          </article>
-
-          <article class="pro-card">
-            <div class="player-avatar-wrap">
-              <img src="images/products/player-b1t.png" alt="b1t" class="player-avatar">
-            </div>
-            <h3 class="player-name">b1t</h3>
-            <p class="player-team">Natus Vincere</p>
-            <span class="player-stat">Наиграно: 760 ч</span>
-          </article>
-
-          <article class="pro-card">
-            <div class="player-avatar-wrap">
-              <img src="images/products/player-zywoo.png" alt="ZywOo" class="player-avatar">
-            </div>
-            <h3 class="player-name">ZywOo</h3>
-            <p class="player-team">Team Vitality</p>
-            <span class="player-stat">Наиграно: 910 ч</span>
-          </article>
+    <!-- Stats Banner (Clean, No Harsh Borders) -->
+    <section class="stats-banner" id="stats">
+      <div class="container stats-grid">
+        <article class="stat-item">
+          <div class="stat-number" id="stat-players">750,000+</div>
+          <div class="stat-label">игроков в AIMCORE</div>
+        </div>
+        <article class="stat-item">
+          <div class="stat-number" id="stat-matches">8 миллионов +</div>
+          <div class="stat-label">матчей сыграно</div>
+        </div>
+        <article class="stat-item">
+          <div class="stat-number" id="stat-ratings">400,00+</div>
+          <div class="stat-label">оценок</div>
         </div>
       </div>
     </section>
 
-    <!-- Секция преимуществ -->
-    <section class="features-section">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Преимущества инфраструктуры AIMCORE</h2>
-          <p class="section-description">Инструменты и стандарты, созданные специально для требовательных игроков</p>
-        </header>
-
-        <div class="features-grid">
-          <article class="feature-card">
-            <h3 class="feature-title">128 Tickrate Серверы</h3>
-            <p class="feature-text">Максимально плавная регистрация попаданий и идеальная синхронизация физики гранат и стрельбы.</p>
-          </article>
-
-          <article class="feature-card">
-            <h3 class="feature-title">Нейросетевой AI-тренер</h3>
-            <p class="feature-text">Глубокий разбор таймингов первого выстрела, траектории прицела и персональные советы по устранению ошибок.</p>
-          </article>
-
-          <article class="feature-card">
-            <h3 class="feature-title">Низкий пинг по всей РФ и СНГ</h3>
-            <p class="feature-text">Выделенные серверные узлы в Москве, Санкт-Петербурге и Европе с прямыми маршрутами до провайдеров.</p>
-          </article>
-
-          <article class="feature-card">
-            <h3 class="feature-title">Соревновательные режимы</h3>
-            <p class="feature-text">Retake, Prefire Practice, DM FFA, AWP Only и дуэльные арены 1v1 с официальным пулом турнирных карт.</p>
-          </article>
+    <!-- Training Cycle Section (More Compact & No Borders) -->
+    <section class="cycle-section" id="cycle">
+      <div class="container cycle-container">
+        <div class="cycle-header">
+          <h2 class="cycle-title">
+            КАЖДЫЙ МАТЧ УЛУЧШАЕТ<br>ВАШУ ТРЕНИРОВКУ
+          </h2>
+          <p class="cycle-desc">
+            AIMCORE - это полный тренировочный цикл: сыграйте матч, позвольте Тренеру проанализировать вашу игру, а затем следуйте своей персональной программе тренировок. Переходите к следующему матчу, и цикл начнется снова
+          </p>
         </div>
-      </div>
-    </section>
 
-    <!-- Секция статистики -->
-    <section class="stats-section">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">AIMCORE в цифрах</h2>
-        </header>
-        <div class="stats-grid">
-          <article class="stat-card">
-            <h3 class="stat-value">14 200+</h3>
-            <p class="stat-label">Активных игроков в день</p>
-          </article>
-          <article class="stat-card">
-            <h3 class="stat-value">32</h3>
-            <p class="stat-label">Игровых тренировочных сервера</p>
-          </article>
-          <article class="stat-card">
-            <h3 class="stat-value">99.9%</h3>
-            <p class="stat-label">Аптайм сетевой инфраструктуры</p>
-          </article>
-          <article class="stat-card">
-            <h3 class="stat-value">128</h3>
-            <p class="stat-label">Тикрейт на всех инстансах</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Секция этапов подготовки -->
-    <section class="steps-section">
-      <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Методика тренировок</h2>
-          <p class="section-description">Пошаговый цикл соревновательной подготовки игрока</p>
-        </header>
-
+        <!-- 4 Step Cards -->
         <div class="steps-grid">
-          <article class="step-card">
-            <span class="step-num">01</span>
-            <h3 class="step-title">Разминка и сенса</h3>
-            <p class="step-text">Быстрый разогрев мышечной памяти на Deathmatch FFA серверах без задержек.</p>
-          </article>
+          <article class="step-card step-red">
+            <div class="step-num">1</div>
+            <h4 class="step-name">Сыграйте матч</h4>
+            <p class="step-text">Вставайте в очередь против других игроков, в одиночку или с друзьями. Тренер анализирует каждый бой.</p>
+          </div>
 
-          <article class="step-card">
-            <span class="step-num">02</span>
-            <h3 class="step-title">Prefire и позиционирование</h3>
-            <p class="step-text">Отработка зачистки углов выхода на соревновательных точках плэнта с умными ботами.</p>
-          </article>
+          <article class="step-card step-orange">
+            <div class="step-num">2</div>
+            <h4 class="step-name">Анализ</h4>
+            <p class="step-text">Тренер анализирует ваш матч, находит плохие привычки и объясняет, почему вы проигрываете раунды.</p>
+          </div>
 
-          <article class="step-card">
-            <span class="step-num">03</span>
-            <h3 class="step-title">Боевые ситуации Retake</h3>
-            <p class="step-text">Закрепление коммуникации и клатч-раундов в реалистичном режиме перезахвата точки.</p>
-          </article>
+          <article class="step-card step-blue">
+            <div class="step-num">3</div>
+            <h4 class="step-name">Обучение</h4>
+            <p class="step-text">Короткий совет покажет вам правильную игру, чтобы вы точно знали, как стать лучше.</p>
+          </div>
 
-          <article class="step-card">
-            <span class="step-num">04</span>
-            <h3 class="step-title">Анализ телеметрии</h3>
-            <p class="step-text">Изучение статистики матча: точность, Headshot %, скорость реакции и персональные рекомендации.</p>
-          </article>
+          <article class="step-card step-cyan">
+            <div class="step-num">4</div>
+            <h4 class="step-name">Практика</h4>
+            <p class="step-text">Тренер создает персональную программу тренировок, разработанную только для вас, на основе того, над чем нужно работать.</p>
+          </div>
+        </div>
+
+        <!-- Loop note -->
+        <div class="cycle-footer">
+          <img src="images/rotate.png" alt="Повтор" class="rotate-icon">
+          <span class="cycle-footer-text">Затем снова вставайте в очередь и продолжайте совершенствоваться.</span>
         </div>
       </div>
     </section>
 
-    <!-- Секция призыва к действию (CTA) -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-box">
-          <h2 class="cta-title">Готовы поднять свой уровень игры?</h2>
-          <p class="cta-text">Выбирайте подходящий сервер в нашем каталоге и подключайтесь к соревновательному сообществу прямо сейчас.</p>
-          <a href="catalog.html" class="btn btn-primary btn-large">Перейти в каталог серверов</a>
+    <!-- Ready to Play / Interactive CS2 Card Section -->
+    <section class="cta-section" id="play-cta">
+      <div class="container cta-container">
+        <h2 class="cta-heading">ГОТОВ К ИГРЕ?</h2>
+        
+        <p class="cta-subheading">Нажми на карточку, чтобы перейти к тренировке</p>
+
+        <!-- Big CS2 Interactive Poster with Soldier Hover Pop-out -->
+        <div class="poster-card-wrapper">
+          <div class="poster-card" id="cs2-interactive-card" role="button" tabindex="0" aria-label="Перейти к игре CS2">
+            <!-- Background Image -->
+            <img src="images/cs2-card-bg.png" alt="Counter Strike 2 Background" class="poster-bg">
+            
+            <!-- Soldier Cutout Layer (Animates & Scales on Hover) -->
+            <div class="soldier-cutout-wrap">
+              <img src="images/cs2-soldier.png" alt="CS2 Soldier" class="soldier-img">
+            </div>
+            
+            <!-- Online Counter Badge -->
+            <div class="online-badge">
+              <span class="online-count">450,000</span>
+              <span class="online-label">онлайн</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Подвал сайта -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="Логотип AIMCORE" class="logo-img">
-            <span class="logo-text">AIMCORE</span>
-          </a>
-          <p class="footer-desc">ООО «АИМКОРЕ» — передовая платформа для развития навыков соревновательной стрельбы в CS2.</p>
-        </div>
-
-        <nav class="footer-nav" aria-label="Навигация в подвале">
-          <h3 class="footer-heading">Разделы сайта</h3>
-          <ul class="footer-list">
-            <li><a href="index.html">Главная страница</a></li>
-            <li><a href="catalog.html">Каталог серверов</a></li>
-            <li><a href="about.html">О платформе</a></li>
-            <li><a href="contacts.html">Контакты и поддержка</a></li>
-          </ul>
-        </nav>
-
-        <div class="footer-contacts">
-          <h3 class="footer-heading">Связь с нами</h3>
-          <p>Email: <a href="mailto:support@aimcore.gg">support@aimcore.gg</a></p>
-          <p>Адрес: г. Оренбург, пр-кт Гагарина, д. 62, офис 79</p>
-          <p>Режим работы: Круглосуточно 24/7</p>
+  <!-- Footer (Clean, No Cyan Border) -->
+  <footer class="footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="images/logo.png" alt="AIMCORE" class="footer-logo">
+        <div class="footer-legal">
+          <p>Copyright 2019-2026</p>
+          <p class="company-name">ООО “АИМКОРЕ”</p>
+          <p class="company-sub">ИНН 78031209301</p>
+          <p class="company-sub">ОГРН 12312294024230</p>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p class="copyright">&copy; 2026 ООО «АИМКОРЕ». Все права защищены.</p>
-        <p class="disclaimer">Counter-Strike, CS2 и логотип Valve являются товарными знаками корпорации Valve. Платформа AIMCORE не аффилирована с Valve Corporation.</p>
+      <div class="footer-nav-col">
+        <a href="catalog.html" class="footer-link">Сервера</a>
+        <a href="catalog.html" class="footer-link">Premium</a>
+        <a href="about.html" class="footer-link">База знаний</a>
+        <a href="catalog.html" class="footer-link">Личный кабинет</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="/#pro-players" class="footer-link">PRO-Игроки</a>
+        <a href="/#cycle" class="footer-link">О платформе</a>
+        <a href="about.html" class="footer-link">Правила серверов</a>
+        <a href="about.html" class="footer-link">Контакты</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="about.html" class="footer-link">Политика конфиденциальности</a>
+        <a href="about.html" class="footer-link">Лицензионное соглашение</a>
+        <a href="about.html" class="footer-link">FAQ по подключению</a>
+        <a href="https://t.me" class="footer-link" target="_blank" rel="noopener noreferrer">Поддержка в Telegram</a>
+      </div>
+    </div>
+
+    <!-- Social links row -->
+    <div class="container footer-bottom">
+      <div class="social-links">
+        <a href="https://steamcommunity.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Steam">
+          <img src="images/steam.png" alt="Steam">
+        </a>
+        <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="VK">
+          <img src="images/vk.png" alt="VK">
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord">
+          <img src="images/discord.png" alt="Discord">
+        </a>
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Telegram">
+          <img src="images/telegram.png" alt="Telegram">
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+          <img src="images/youtube.png" alt="YouTube">
+        </a>
       </div>
     </div>
   </footer>
 
-  <!-- Подключение скрипта проекта (пока пустой файл по заданию День 8-9) -->
   <script src="js/script.js"></script>
 </body>
 </html>

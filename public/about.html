@@ -7,50 +7,71 @@
   <meta name="description" content="О компании ООО «АИМКОРЕ»: миссия, принципы соревновательной подготовки в CS2, модули информационной системы и ответы на вопросы.">
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Подключение стилей проекта (пока пустые файлы по заданию День 8-9) -->
+  <!-- Google Fonts: Russo One & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Шапка сайта и навигация -->
-  <header class="header">
-    <div class="container">
-      <nav class="navbar" aria-label="Главная навигация">
-        <a href="index.html" class="logo">
-          <img src="images/logo.png" alt="Логотип AIMCORE" class="logo-img">
-          <span class="logo-text">AIMCORE</span>
+  <!-- Header / Navigation Bar Capsule -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="nav-group nav-left">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="catalog.html" class="nav-link">Каталог</a>
+        <a href="about.html" class="nav-link active">О нас</a>
+      </div>
+
+      <a href="index.html" class="brand-logo" aria-label="AIMCORE Главная">
+        <img src="images/logo.png" alt="AIMCORE Logo" class="logo-img">
+      </a>
+
+      <div class="nav-group nav-right">
+        <a href="contacts.html" class="nav-link">Контакты</a>
+        <a href="catalog.html" class="nav-link nav-btn-profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Кабинет
         </a>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
-          <li class="nav-item"><a href="catalog.html" class="nav-link">Каталог</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link active">О нас</a></li>
-          <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
-        </ul>
-        <div class="nav-actions">
-          <a href="catalog.html" class="btn btn-primary">К серверам</a>
-        </div>
-      </nav>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Открыть меню">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile dropdown menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mobile-link">Главная</a>
+      <a href="catalog.html" class="mobile-link">Каталог</a>
+      <a href="about.html" class="mobile-link active">О нас</a>
+      <a href="contacts.html" class="mobile-link">Контакты</a>
     </div>
   </header>
 
-  <main>
-
-    <!-- Заглавная секция страницы О нас -->
+  <main class="about-page-main">
+    <!-- About Hero -->
     <section class="about-hero-section">
-      <div class="container">
+      <div class="container about-hero-container">
+        <span class="about-hero-badge">О КОМПАНИИ И ПЛАТФОРМЕ</span>
         <h1 class="page-title">О платформе AIMCORE</h1>
-        <p class="page-subtitle">Создаем профессиональную соревновательную экосистему для игроков и команд тактических шутеров</p>
+        <p class="page-subtitle">
+          Создаем профессиональную соревновательную экосистему для игроков и команд тактических шутеров в дисциплине Counter-Strike 2.
+        </p>
       </div>
     </section>
 
-    <!-- Описание компании и история -->
+    <!-- Company Description -->
     <section class="company-profile-section">
       <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Характеристика предприятия</h2>
-        </header>
-
         <div class="company-text-block">
           <p><strong>Полное наименование организации:</strong> Общество с ограниченной ответственностью «АИМКОРЕ» (ООО «АИМКОРЕ»).</p>
           <p><strong>Месторасположение организации:</strong> 460000, Оренбургская область, г. Оренбург, пр-кт Гагарина, д. 62, офис 79.</p>
@@ -60,12 +81,13 @@
       </div>
     </section>
 
-    <!-- Миссия и основные процессы -->
+    <!-- Mission & Processes -->
     <section class="mission-section">
       <div class="container">
-        <header class="section-header">
+        <header class="section-header text-center">
+          <span class="about-hero-badge">ПРОЦЕССЫ ПРЕДПРИЯТИЯ</span>
           <h2 class="section-title">Основные процессы и направления деятельности</h2>
-          <p class="section-description">Как устроена работа компании и платформы AIMCORE</p>
+          <p class="section-subtitle">Как устроена работа инфраструктуры и тренировочной системы AIMCORE</p>
         </header>
 
         <div class="mission-grid">
@@ -92,12 +114,13 @@
       </div>
     </section>
 
-    <!-- Модули информационной системы -->
+    <!-- Information System Architecture Modules -->
     <section class="modules-section">
       <div class="container">
-        <header class="section-header">
-          <h2 class="section-title">Архитектура информационной системы</h2>
-          <p class="section-description">Ключевые программные модули, обеспечивающие работу веб-платформы</p>
+        <header class="section-header text-center">
+          <span class="about-hero-badge">АРХИТЕКТУРА СИСТЕМЫ</span>
+          <h2 class="section-title">Архитектура модулей информационной системы</h2>
+          <p class="section-subtitle">Ключевые программные узлы веб-ориентированной платформы AIMCORE</p>
         </header>
 
         <div class="modules-grid">
@@ -124,77 +147,85 @@
       </div>
     </section>
 
-    <!-- Часто задаваемые вопросы (FAQ) -->
-    <section class="faq-section">
+    <!-- FAQ Accordion -->
+    <section class="faq-section" style="padding-top: 20px;">
       <div class="container">
-        <header class="section-header">
+        <header class="section-header text-center">
+          <span class="about-hero-badge">БАЗА ЗНАНИЙ</span>
           <h2 class="section-title">Часто задаваемые вопросы (FAQ)</h2>
-          <p class="section-description">Ответы на популярные вопросы пользователей платформы</p>
+          <p class="section-subtitle">Ответы на популярные вопросы пользователей платформы</p>
         </header>
 
-        <div class="faq-list">
-          <article class="faq-item">
-            <h3 class="faq-question">Как начать играть на серверах AIMCORE?</h3>
-            <p class="faq-answer">Откройте страницу «Каталог», выберите нужный сервер и скопируйте команду подключения вида <code>connect ip:port</code>. Затем запустите CS2, откройте консоль разработчика (клавиша ~) и вставьте команду.</p>
+        <div class="faq-list" style="display: flex; flex-direction: column; gap: 16px; max-width: 860px; margin: 32px auto 0;">
+          <article class="faq-item" style="background: var(--bg-card); border-radius: 16px; padding: 24px; border: 1px solid rgba(255,255,255,0.05);">
+            <h3 class="faq-question" style="font-family: var(--font-russo); color: var(--accent-cyan); font-size: 18px; margin-bottom: 10px;">Как подключиться к тренировочному серверу AIMCORE?</h3>
+            <p class="faq-answer" style="color: var(--text-gray-desc); font-size: 15px; line-height: 1.6;">Откройте страницу «Каталог», выберите нужный сервер и скопируйте команду подключения вида <code>connect ip:port</code>. Затем запустите CS2, откройте консоль разработчика (клавиша ~) и вставьте команду.</p>
           </article>
 
-          <article class="faq-item">
-            <h3 class="faq-question">Нужно ли скачивать сторонние программы или моды?</h3>
-            <p class="faq-answer">Нет, все моды и сценарии загружаются автоматически при подключении к серверу через официальный клиент Counter-Strike 2.</p>
+          <article class="faq-item" style="background: var(--bg-card); border-radius: 16px; padding: 24px; border: 1px solid rgba(255,255,255,0.05);">
+            <h3 class="faq-question" style="font-family: var(--font-russo); color: var(--accent-cyan); font-size: 18px; margin-bottom: 10px;">Нужно ли скачивать сторонние программы или моды?</h3>
+            <p class="faq-answer" style="color: var(--text-gray-desc); font-size: 15px; line-height: 1.6;">Нет, все моды и тренировочные сценарии загружаются автоматически при подключении к серверу через официальный клиент Counter-Strike 2.</p>
           </article>
 
-          <article class="faq-item">
-            <h3 class="faq-question">Безопасна ли авторизация через Steam?</h3>
-            <p class="faq-answer">Да, полностью безопасна. Мы используем открытый протокол авторизации Steam OpenID от Valve Corporation. Ваши логин и пароль вводятся исключительно на защищенном сайте Steam.</p>
+          <article class="faq-item" style="background: var(--bg-card); border-radius: 16px; padding: 24px; border: 1px solid rgba(255,255,255,0.05);">
+            <h3 class="faq-question" style="font-family: var(--font-russo); color: var(--accent-cyan); font-size: 18px; margin-bottom: 10px;">Безопасна ли авторизация через Steam?</h3>
+            <p class="faq-answer" style="color: var(--text-gray-desc); font-size: 15px; line-height: 1.6;">Да, полностью безопасна. Мы используем официальный защищенный протокол Steam OpenID от Valve Corporation. Ваши учетные данные остаются строго конфиденциальными.</p>
           </article>
 
-          <article class="faq-item">
-            <h3 class="faq-question">Как работает резервный слот для подписчиков PRO?</h3>
-            <p class="faq-answer">На всех серверах зарезервированы выделенные слоты. Если сервер переполнен, подписчик тарифа PRO или Elite попадает в игру в приоритетном порядке.</p>
+          <article class="faq-item" style="background: var(--bg-card); border-radius: 16px; padding: 24px; border: 1px solid rgba(255,255,255,0.05);">
+            <h3 class="faq-question" style="font-family: var(--font-russo); color: var(--accent-cyan); font-size: 18px; margin-bottom: 10px;">Как работает резервный слот для подписчиков PRO?</h3>
+            <p class="faq-answer" style="color: var(--text-gray-desc); font-size: 15px; line-height: 1.6;">На всех серверах зарезервированы выделенные слоты. Если сервер переполнен, подписчик тарифа PRO или Elite попадает в игру в приоритетном порядке.</p>
           </article>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Подвал сайта -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="Логотип AIMCORE" class="logo-img">
-            <span class="logo-text">AIMCORE</span>
-          </a>
-          <p class="footer-desc">Информация о компании и архитектуре веб-ориентированной информационной системы ООО «АИМКОРЕ».</p>
-        </div>
-
-        <nav class="footer-nav" aria-label="Навигация в подвале">
-          <h3 class="footer-heading">Разделы сайта</h3>
-          <ul class="footer-list">
-            <li><a href="index.html">Главная страница</a></li>
-            <li><a href="catalog.html">Каталог серверов</a></li>
-            <li><a href="about.html">О платформе</a></li>
-            <li><a href="contacts.html">Контакты и поддержка</a></li>
-          </ul>
-        </nav>
-
-        <div class="footer-contacts">
-          <h3 class="footer-heading">Связь с нами</h3>
-          <p>Email: <a href="mailto:support@aimcore.gg">support@aimcore.gg</a></p>
-          <p>Адрес: г. Оренбург, пр-кт Гагарина, д. 62, офис 79</p>
-        </div>
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-col-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="images/logo.png" alt="AIMCORE Logo" class="footer-logo-img">
+          <span class="footer-brand-name">AIMCORE</span>
+        </a>
+        <p class="footer-desc">
+          Передовая платформа для соревновательной подготовки и тренировки стрельбы в CS2. 128 Tickrate, аналитика и PRO-игроки.
+        </p>
       </div>
 
-      <div class="footer-bottom">
-        <p class="copyright">&copy; 2026 ООО «АИМКОРЕ». Все права защищены.</p>
-        <p class="disclaimer">Counter-Strike, CS2 и логотип Valve являются товарными знаками корпорации Valve. Платформа AIMCORE не аффилирована с Valve Corporation.</p>
+      <div class="footer-col">
+        <h4 class="footer-heading">Платформа</h4>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Серверы CS2</a></li>
+          <li><a href="about.html">База знаний и FAQ</a></li>
+          <li><a href="catalog.html">Тарифы Premium</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Контакты</h4>
+        <ul class="footer-links">
+          <li><span>Email: support@aimcore.gg</span></li>
+          <li><span>Офис: г. Оренбург, пр-кт Гагарина, д. 62</span></li>
+          <li><span>ООО «АИМКОРЕ»</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="legal-text">
+          &copy; 2026 ООО «АИМКОРЕ». Все права защищены.
+        </p>
+        <p class="legal-subtext">
+          Counter-Strike, CS2 и логотип Valve являются товарными знаками корпорации Valve.
+        </p>
       </div>
     </div>
   </footer>
 
-  <!-- Подключение скрипта проекта (пока пустой файл по заданию День 8-9) -->
   <script src="js/script.js"></script>
 </body>
 </html>
