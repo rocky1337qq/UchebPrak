@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIMCORE — Личный кабинет игрока | Steam Профиль и Статистика</title>
+  <meta name="description" content="Минималистичный личный кабинет игрока на платформе AIMCORE. Авторизация через Steam, статус Premium, ELO, статистика точности выстрелов и настройки профиля.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="nav-group nav-left">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="servers.html" class="nav-link">Сервера</a>
+        <a href="faq.html" class="nav-link">База знаний</a>
+      </div>
+
+      <a href="index.html" class="brand-logo" aria-label="AIMCORE Главная">
+        <img src="assets/images/logo.png" alt="AIMCORE Logo" class="logo-img">
+      </a>
+
+      <div class="nav-group nav-right">
+        <a href="premium.html" class="nav-link">Premium</a>
+        <a href="profile.html" class="nav-link active nav-btn-profile" id="nav-profile-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span id="nav-profile-text">Кабинет</span>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Открыть меню">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mobile-link">Главная</a>
+      <a href="servers.html" class="mobile-link">Сервера</a>
+      <a href="premium.html" class="mobile-link">Premium</a>
+      <a href="faq.html" class="mobile-link">База знаний</a>
+      <a href="profile.html" class="mobile-link active" id="mobile-profile-link">Личный кабинет</a>
+    </div>
+  </header>
+
+  <main class="profile-page-main">
+    <div class="container profile-container">
+
+      <section class="profile-card profile-login-card" id="profile-login-card" style="display: none;">
+        <span class="login-card-badge">STEAM OPENID 2.0</span>
+        <h1 class="login-card-title">ВХОД В ЛИЧНЫЙ КАБИНЕТ</h1>
+        <p class="login-card-desc">
+          Авторизуйтесь через официальный Steam для синхронизации вашей CS2 статистики, ранга Faceit, сохранения настроек в базе данных и доступа к закрытым серверам.
+        </p>
+
+        <div class="login-actions-group">
+          <a href="#" class="btn btn-steam-auth">
+            <img src="assets/images/steam.png" alt="Steam" class="steam-icon-btn">
+            Войти через Steam
+          </a>
+          <button class="btn btn-demo-auth" id="btn-demo-auth">
+            Демо-вход (без Steam)
+          </button>
+        </div>
+
+        <div class="login-benefits-row">
+          <span class="benefit-pill">Синхронизация профиля CS2 и Faceit</span>
+          <span class="benefit-pill">Сохранение персональных настроек в SQLite</span>
+          <span class="benefit-pill">Автоматическая привязка Premium-слотов</span>
+        </div>
+      </section>
+
+      <div id="profile-auth-section">
+
+        <section class="profile-card profile-hero-card">
+          <div class="profile-avatar-wrap">
+            <img src="assets/images/player-molodoy.png" alt="Steam Avatar" class="profile-avatar-img" id="profile-avatar">
+            <span class="profile-online-badge">ONLINE</span>
+          </div>
+
+          <div class="profile-meta-info">
+            <div class="profile-name-row">
+              <h1 class="profile-nickname" id="profile-nick">Загрузка...</h1>
+              <span class="profile-tier-badge" id="profile-tier-badge">FREE</span>
+            </div>
+
+            <p class="profile-steam-id">Steam ID: <span class="id-val" id="profile-steamid">76561198829104128</span></p>
+
+            <div class="profile-quick-tags">
+              <span class="meta-pill" id="profile-faceit-lvl">Faceit Level 9</span>
+              <span class="meta-pill">Регион: Москва (RU)</span>
+              <span class="meta-pill" id="profile-db-sync">Синхронизировано с БД</span>
+            </div>
+          </div>
+
+          <div class="profile-cta-actions">
+            <a href="premium.html" class="btn btn-primary btn-sub-action" id="btn-profile-premium">
+              Оформить Premium
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sync-steam" id="btn-steam-link">
+              Открыть профиль Steam
+            </a>
+            <button class="btn btn-logout" id="btn-logout">
+              Выйти из аккаунта
+            </button>
+          </div>
+        </section>
+
+        <section class="profile-stats-grid">
+
+          <div class="stat-widget-card">
+            <div class="widget-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="widget-data">
+              <span class="widget-value" id="stat-elo">2,140</span>
+              <span class="widget-label">Рейтинг ELO</span>
+            </div>
+          </div>
+
+          <div class="stat-widget-card">
+            <div class="widget-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25efbb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="22" y1="12" x2="18" y2="12"></line>
+                <line x1="6" y1="12" x2="2" y2="12"></line>
+                <line x1="12" y1="6" x2="12" y2="2"></line>
+                <line x1="12" y1="22" x2="12" y2="18"></line>
+              </svg>
+            </div>
+            <div class="widget-data">
+              <span class="widget-value" id="stat-hs">64.8%</span>
+              <span class="widget-label">Точность HS</span>
+            </div>
+          </div>
+
+          <div class="stat-widget-card">
+            <div class="widget-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7298f8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="widget-data">
+              <span class="widget-value" id="stat-hours">48 ч</span>
+              <span class="widget-label">Время на серверах</span>
+            </div>
+          </div>
+
+          <div class="stat-widget-card">
+            <div class="widget-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fe882e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <div class="widget-data">
+              <span class="widget-value" id="stat-winrate">68.2%</span>
+              <span class="widget-label">Винрейт Retake</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-details-grid">
+
+          <div class="profile-card profile-sub-panel">
+            <h2 class="panel-title">Статус аккаунта в SQLite</h2>
+
+            <div class="sub-status-box" id="sub-status-box">
+              <div class="status-indicator-row">
+                <span class="status-dot"></span>
+                <span class="status-title" id="status-title">Бесплатный тариф</span>
+              </div>
+              <p class="status-desc" id="status-desc">
+                Вам доступно подключение к публичным серверам. Для резервного входа при заполнении 16/16 и доступа к PRO-хабам подключите Premium.
+              </p>
+            </div>
+
+            <div class="sub-privileges-checklist">
+              <div class="check-item">
+                <span class="icon-slot">✓</span>
+                <span>Доступ к серверам Retake & DM</span>
+              </div>
+              <div class="check-item" id="priv-slot">
+                <span class="icon-slot inactive">—</span>
+                <span>Резервный слот без очередей</span>
+              </div>
+              <div class="check-item" id="priv-skins">
+                <span class="icon-slot inactive">—</span>
+                <span>Кастомные скины и ножи (!ws, !knife)</span>
+              </div>
+              <div class="check-item" id="priv-pro">
+                <span class="icon-slot inactive">—</span>
+                <span>Закрытые PRO-кластеры 2500+ ELO</span>
+              </div>
+            </div>
+
+            <a href="premium.html" class="btn btn-primary btn-manage-sub" id="btn-manage-sub">
+              Перейти к тарифам
+            </a>
+          </div>
+
+          <div class="profile-card profile-settings-panel">
+            <h2 class="panel-title">Настройки игры на серверах</h2>
+
+            <div class="settings-list">
+              <div class="setting-item">
+                <div class="setting-text">
+                  <span class="setting-name">Автоматический коннект в CS2</span>
+                  <span class="setting-desc">Запускать CS2 напрямую при нажатии «Подключиться» на сайте</span>
+                </div>
+                <label class="switch-toggle">
+                  <input type="checkbox" checked id="pref-autoconnect">
+                  <span class="switch-slider"></span>
+                </label>
+              </div>
+
+              <div class="setting-item">
+                <div class="setting-text">
+                  <span class="setting-name">Отображение звания Faceit в табе</span>
+                  <span class="setting-desc">Показывать текущий уровень ELO рядом с ником на сервере</span>
+                </div>
+                <label class="switch-toggle">
+                  <input type="checkbox" checked id="pref-show-elo">
+                  <span class="switch-slider"></span>
+                </label>
+              </div>
+
+              <div class="setting-item">
+                <div class="setting-text">
+                  <span class="setting-name">Звуковое оповещение о раунде</span>
+                  <span class="setting-desc">Короткий звуковой сигнал при старте раунда на Retake</span>
+                </div>
+                <label class="switch-toggle">
+                  <input type="checkbox" id="pref-sound">
+                  <span class="switch-slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <button class="btn btn-secondary btn-save-prefs" id="btn-save-prefs">
+              Сохранить настройки
+            </button>
+          </div>
+
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="toast-notification" id="toast-notification">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toast-message">Настройки успешно сохранены!</div>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="assets/images/logo.png" alt="AIMCORE" class="footer-logo">
+        <div class="footer-legal">
+          <p>Copyright 2019-2026</p>
+          <p class="company-name">ООО “АИМКОРЕ”</p>
+          <p class="company-sub">ИНН 78031209301</p>
+          <p class="company-sub">ОГРН 12312294024230</p>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="servers.html" class="footer-link">Сервера</a>
+        <a href="premium.html" class="footer-link">Premium</a>
+        <a href="faq.html" class="footer-link">База знаний</a>
+        <a href="profile.html" class="footer-link">Личный кабинет</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="index.html#pro-players" class="footer-link">PRO-Игроки</a>
+        <a href="index.html#cycle" class="footer-link">О платформе</a>
+        <a href="faq.html" class="footer-link">Правила серверов</a>
+        <a href="faq.html" class="footer-link">Контакты</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="faq.html" class="footer-link">Политика конфиденциальности</a>
+        <a href="faq.html" class="footer-link">Лицензионное соглашение</a>
+        <a href="faq.html" class="footer-link">FAQ по подключению</a>
+        <a href="https://t.me" class="footer-link" target="_blank" rel="noopener noreferrer">Поддержка в Telegram</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="social-links">
+        <a href="https://steamcommunity.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Steam">
+          <img src="assets/images/steam.png" alt="Steam">
+        </a>
+        <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="VK">
+          <img src="assets/images/vk.png" alt="VK">
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord">
+          <img src="assets/images/discord.png" alt="Discord">
+        </a>
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Telegram">
+          <img src="assets/images/telegram.png" alt="Telegram">
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+          <img src="assets/images/youtube.png" alt="YouTube">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>

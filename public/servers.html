@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIMCORE — Игровые серверы CS2 | Retake, DM, Prefire, Duels</title>
+  <meta name="description" content="Список игровых серверов AIMCORE для тренировки стрельбы в CS2. Выбирай режим, карту и подключайся в один клик без очередей.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/servers.css">
+</head>
+<body>
+
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="nav-group nav-left">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="servers.html" class="nav-link active">Сервера</a>
+        <a href="faq.html" class="nav-link">База знаний</a>
+      </div>
+
+      <a href="index.html" class="brand-logo" aria-label="AIMCORE Главная">
+        <img src="assets/images/logo.png" alt="AIMCORE Logo" class="logo-img">
+      </a>
+
+      <div class="nav-group nav-right">
+        <a href="premium.html" class="nav-link">Premium</a>
+        <a href="profile.html" class="nav-link nav-btn-profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Кабинет
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Открыть меню">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mobile-link">Главная</a>
+      <a href="servers.html" class="mobile-link active">Сервера</a>
+      <a href="premium.html" class="mobile-link">Premium</a>
+      <a href="faq.html" class="mobile-link">База знаний</a>
+      <a href="profile.html" class="mobile-link">Личный кабинет</a>
+    </div>
+  </header>
+
+  <main class="servers-page-main">
+
+    <section class="servers-hero">
+      <div class="container servers-hero-container">
+        <div class="servers-hero-badge">CS2 NETWORK MONITOR</div>
+        <h1 class="servers-title">
+          ИГРОВЫЕ СЕРВЕРЫ <span class="accent-title">AIMCORE</span>
+        </h1>
+        <p class="servers-subtitle">
+          Выбирай тренировочный режим, карту и подключайся мгновенно. 128 Tickrate, низкий пинг и защита от очередей
+        </p>
+
+        <div class="telemetry-bar">
+          <div class="telemetry-item">
+            <span class="telemetry-dot online"></span>
+            <span class="telemetry-val" id="total-players-count">248 / 320</span>
+            <span class="telemetry-lbl">игроков онлайн</span>
+          </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item">
+            <span class="telemetry-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </span>
+            <span class="telemetry-val">16–22 ms</span>
+            <span class="telemetry-lbl">средний пинг (RU)</span>
+          </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item">
+            <span class="telemetry-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#25efbb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </span>
+            <span class="telemetry-val">Sub-Tick 128T</span>
+            <span class="telemetry-lbl">оптимизация сети</span>
+          </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item">
+            <span class="telemetry-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7298f8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </span>
+            <span class="telemetry-val" id="servers-online-count">12 серверов</span>
+            <span class="telemetry-lbl">активно</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls-section">
+      <div class="container">
+
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              id="server-search-input" 
+              class="search-input" 
+              placeholder="Поиск по названию сервера, карте (Mirage, Inferno) или IP..."
+              autocomplete="off"
+            >
+            <button class="search-clear-btn" id="search-clear-btn" aria-label="Очистить поиск" style="display: none;">✕</button>
+          </div>
+
+          <div class="quick-stats-counter">
+            Найдено: <strong id="visible-servers-count">12</strong>
+          </div>
+        </div>
+
+        <div class="mode-pills-wrap">
+          <button class="mode-pill active" data-mode="all">Все режимы</button>
+          <button class="mode-pill" data-mode="retake">Retake</button>
+          <button class="mode-pill" data-mode="dm">DM FFA</button>
+          <button class="mode-pill" data-mode="prefire">Prefire Arena</button>
+          <button class="mode-pill" data-mode="duels">Duels 1v1</button>
+          <button class="mode-pill" data-mode="hs">Headshot Only</button>
+          <button class="mode-pill" data-mode="awp">AWP Only</button>
+        </div>
+
+        <div class="secondary-filters-row">
+          <div class="select-group">
+
+            <div class="custom-select-wrap">
+              <label for="filter-map" class="select-label">Карта:</label>
+              <select id="filter-map" class="filter-select">
+                <option value="all">Все карты</option>
+                <option value="de_mirage">Mirage</option>
+                <option value="de_inferno">Inferno</option>
+                <option value="de_dust2">Dust II</option>
+                <option value="de_nuke">Nuke</option>
+                <option value="de_ancient">Ancient</option>
+                <option value="de_anubis">Anubis</option>
+                <option value="aim_redline">Aim Redline</option>
+                <option value="awp_lego">AWP Lego</option>
+              </select>
+            </div>
+
+            <div class="custom-select-wrap">
+              <label for="filter-location" class="select-label">Локация:</label>
+              <select id="filter-location" class="filter-select">
+                <option value="all">Все регионы</option>
+                <option value="ru">Москва (RU)</option>
+                <option value="de">Франкфурт (DE)</option>
+                <option value="pl">Варшава (PL)</option>
+                <option value="fi">Хельсинки (FI)</option>
+              </select>
+            </div>
+
+            <div class="custom-select-wrap">
+              <label for="filter-sort" class="select-label">Сортировка:</label>
+              <select id="filter-sort" class="filter-select">
+                <option value="ping">По пингу (лучший)</option>
+                <option value="players">По количеству игроков</option>
+                <option value="name">По названию</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="filter-has-slots">
+              <span class="checkbox-box"></span>
+              <span class="checkbox-text">Свободные места</span>
+            </label>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" id="filter-favorites">
+              <span class="checkbox-box star-box"></span>
+              <span class="checkbox-text">Только избранные</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="servers-grid-section">
+      <div class="container">
+        <div class="servers-grid" id="servers-container">
+
+        </div>
+
+        <div class="servers-empty-state" id="servers-empty-state" style="display: none;">
+          <div class="empty-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <h3 class="empty-title">Серверы не найдены</h3>
+          <p class="empty-desc">Попробуй изменить фильтры или сбросить поисковый запрос</p>
+          <button class="btn btn-secondary" id="reset-filters-btn">Сбросить фильтры</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="connect-modal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="connect-modal-title">Подключение к серверу</h3>
+        <button class="modal-close" id="connect-modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-server-info" id="connect-modal-info">
+
+        </div>
+
+        <div class="connect-copy-box">
+          <label class="connect-label">Команда для консоли CS2 (нажмите ~):</label>
+          <div class="connect-input-group">
+            <input type="text" id="connect-cmd-input" class="connect-input" readonly>
+            <button class="btn btn-primary btn-copy" id="copy-cmd-btn">Скопировать</button>
+          </div>
+        </div>
+
+        <div class="connect-actions">
+          <a href="#" class="btn btn-steam-direct" id="steam-direct-link">
+            <img src="assets/images/steam.png" alt="Steam" class="steam-inline-icon">
+            Запустить CS2 и зайти на сервер
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="players-modal" style="display: none;">
+    <div class="modal-card modal-large">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="players-modal-title">Игроки на сервере</h3>
+          <p class="modal-subtitle" id="players-modal-subtitle">Mirage • 14/16</p>
+        </div>
+        <button class="modal-close" id="players-modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="players-table-wrap">
+          <table class="players-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Игрок</th>
+                <th>K / D</th>
+                <th>Счет</th>
+                <th>Время</th>
+                <th>Пинг</th>
+              </tr>
+            </thead>
+            <tbody id="players-table-body">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-notification" id="toast-notification">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toast-message">Команда скопирована!</div>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="assets/images/logo.png" alt="AIMCORE" class="footer-logo">
+        <div class="footer-legal">
+          <p>Copyright 2019-2026</p>
+          <p class="company-name">ООО “АИМКОРЕ”</p>
+          <p class="company-sub">ИНН 78031209301</p>
+          <p class="company-sub">ОГРН 12312294024230</p>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="servers.html" class="footer-link">Сервера</a>
+        <a href="premium.html" class="footer-link">Premium</a>
+        <a href="faq.html" class="footer-link">База знаний</a>
+        <a href="profile.html" class="footer-link">Личный кабинет</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="index.html#pro-players" class="footer-link">PRO-Игроки</a>
+        <a href="index.html#cycle" class="footer-link">О платформе</a>
+        <a href="faq.html" class="footer-link">Правила серверов</a>
+        <a href="faq.html" class="footer-link">Контакты</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="faq.html" class="footer-link">Политика конфиденциальности</a>
+        <a href="faq.html" class="footer-link">Лицензионное соглашение</a>
+        <a href="faq.html" class="footer-link">FAQ по подключению</a>
+        <a href="https://t.me" class="footer-link" target="_blank" rel="noopener noreferrer">Поддержка в Telegram</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="social-links">
+        <a href="https://steamcommunity.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Steam">
+          <img src="assets/images/steam.png" alt="Steam">
+        </a>
+        <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="VK">
+          <img src="assets/images/vk.png" alt="VK">
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord">
+          <img src="assets/images/discord.png" alt="Discord">
+        </a>
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Telegram">
+          <img src="assets/images/telegram.png" alt="Telegram">
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+          <img src="assets/images/youtube.png" alt="YouTube">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/servers.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIMCORE — База знаний и FAQ | Настройка CS2, подключение и правила</title>
+  <meta name="description" content="База знаний игровой платформы AIMCORE. Ответы на частые вопросы по настройке CS2, подключению через консоль, командам серверов и подписке.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/faq.css">
+</head>
+<body>
+
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="nav-group nav-left">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="servers.html" class="nav-link">Сервера</a>
+        <a href="faq.html" class="nav-link active">База знаний</a>
+      </div>
+
+      <a href="index.html" class="brand-logo" aria-label="AIMCORE Главная">
+        <img src="assets/images/logo.png" alt="AIMCORE Logo" class="logo-img">
+      </a>
+
+      <div class="nav-group nav-right">
+        <a href="premium.html" class="nav-link">Premium</a>
+        <a href="profile.html" class="nav-link nav-btn-profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Кабинет
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Открыть меню">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mobile-link">Главная</a>
+      <a href="servers.html" class="mobile-link">Сервера</a>
+      <a href="premium.html" class="mobile-link">Premium</a>
+      <a href="faq.html" class="mobile-link active">База знаний</a>
+      <a href="profile.html" class="mobile-link">Личный кабинет</a>
+    </div>
+  </header>
+
+  <main class="faq-page-main">
+
+    <section class="faq-hero">
+      <div class="container faq-hero-container">
+        <div class="faq-hero-badge">HELP CENTER & DOCUMENTATION</div>
+        <h1 class="faq-title">
+          БАЗА ЗНАНИЙ <span class="accent-title">AIMCORE</span>
+        </h1>
+        <p class="faq-subtitle">
+          Пошаговые инструкции, консольные команды, регламент серверов и решение любых технических вопросов по CS2
+        </p>
+
+        <div class="faq-search-wrap">
+          <svg class="search-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="faq-search-input" 
+            class="faq-search-input" 
+            placeholder="Поиск по вопросам (например: connect, бинд, пинг, скины, AFK)..." 
+            autocomplete="off"
+          >
+          <button class="search-clear-btn" id="faq-search-clear" style="display: none;" aria-label="Очистить поиск">✕</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-filters-section">
+      <div class="container">
+        <div class="faq-pills-wrap">
+          <button class="faq-pill active" data-category="all">Все вопросы</button>
+          <button class="faq-pill" data-category="connect">Подключение и консоль</button>
+          <button class="faq-pill" data-category="servers">Серверы и Sub-Tick</button>
+          <button class="faq-pill" data-category="premium">Premium и скины</button>
+          <button class="faq-pill" data-category="rules">Правила и античит</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-accordion-section">
+      <div class="container">
+        <div class="faq-list" id="faq-list">
+
+          <div class="faq-item" data-category="connect">
+            <button class="faq-question-btn">
+              <span class="faq-question-text">Как подключиться к серверу через консоль CS2?</span>
+              <span class="faq-arrow-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer-body">
+              <p>Для прямого подключения к игровому серверу выполните следующие действия:</p>
+              <ol class="faq-steps-list">
+                <li>Запустите Counter-Strike 2 в Steam.</li>
+                <li>Нажмите клавишу <strong>~</strong> (тильда / буква Ё) на клавиатуре для открытия консоли разработчика.</li>
+                <li>Скопируйте команду подключения выбранного сервера и нажмите <strong>Enter</strong>.</li>
+              </ol>
+              <div class="code-snippet-box">
+                <span class="code-text">connect 45.136.205.160:27015</span>
+                <button class="btn-copy-code" data-copy="connect 45.136.205.160:27015">Скопировать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="connect">
+            <button class="faq-question-btn">
+              <span class="faq-question-text">Что делать, если не открывается консоль в CS2?</span>
+              <span class="faq-arrow-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer-body">
+              <p>По умолчанию в CS2 консоль разработчика выключена. Чтобы ее включить:</p>
+              <ol class="faq-steps-list">
+                <li>Откройте <strong>Настройки игры</strong> (значок шестеренки в левом верхнем углу).</li>
+                <li>Перейдите во вкладку <strong>Игра</strong> -> пункт <strong>Включить консоль разработчика (~)</strong>.</li>
+                <li>Установите значение <strong>Да</strong>.</li>
+                <li>Во вкладке <strong>Клавиатура и мышь</strong> -> <strong>Клавиши интерфейса</strong> убедитесь, что на открытие консоли назначена удобная клавиша.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="servers">
+            <button class="faq-question-btn">
+              <span class="faq-question-text">Чем серверы AIMCORE отличаются от стандартного матчмейкинга Valve?</span>
+              <span class="faq-arrow-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer-body">
+              <p>Серверы AIMCORE работают на выделенном оборудовании с тактовой частотой процессоров от 4.8 GHz и кастомным сетевым стеком:</p>
+              <ul class="faq-bullets-list">
+                <li><strong>Мгновенный спавн (Instant Respawn)</strong> — без экранов смерти и ожидания.</li>
+                <li><strong>Оптимизация сетевых пакетов Sub-Tick</strong> — сниженная интерполяция и регистрация попаданий первого патрона без задержки.</li>
+                <li><strong>Умный баланс команд</strong> — автоматическое распределение игроков по уровню Faceit ELO.</li>
+                <li><strong>Отсутствие перегрузок</strong> — средний пинг для игроков из России составляет 14–19 ms.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="premium">
+            <button class="faq-question-btn">
+              <span class="faq-question-text">Как активировать ножи и скины на серверах (!ws, !knife)?</span>
+              <span class="faq-arrow-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer-body">
+              <p>Для пользователей с активной подпиской <strong>AIMCORE Premium</strong> доступен полный гардероб предметов:</p>
+              <ul class="faq-bullets-list">
+                <li><strong>!knife</strong> — откроет меню выбора ножа (Karambit, Butterfly, M9 Bayonet, Talon и др.).</li>
+                <li><strong>!ws</strong> — откроет меню выбора скинов для текущего оружия в руках.</li>
+                <li><strong>!gloves</strong> — выбор спортивных, мотоциклетных или водительских перчаток.</li>
+              </ul>
+              <p>Все выбранные скины сохраняются за вашим Steam ID и будут автоматически применяться на всех серверах сети.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="premium">
+            <button class="faq-question-btn">
+              <span class="faq-question-text">Как работает резервный VIP-слот при заполнении 16/16?</span>
+              <span class="faq-arrow-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer-body">
+              <p>Каждый сервер AIMCORE имеет скрытый резервный слот, предназначенный исключительно для Premium-игроков. Если сервер отображается как <strong>16/16 (Полный)</strong>, вы все равно вводите команду подключения или нажимаете кнопку на сайте — сервер распознает ваш статус и подключит вас без очереди.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="servers">
+            <button class="faq-question-btn">
+              <span class="faq-question-text">Почему меня отключило от сервера (Server is full / Bad Challenge)?</span>
+              <span class="faq-arrow-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer-body">
+              <p>Наиболее распространенные причины:</p>
+              <ul class="faq-bullets-list">
+                <li><strong>Server is full</strong> — на сервере нет свободных базовых слотов для обычных игроков. Подождите 1–2 минуты или выберите другой сервер из мониторинга.</li>
+                <li><strong>Client version outdated</strong> — вышло обновление CS2 в Steam. Перезапустите клиент Steam для скачивания патча.</li>
+                <li><strong>Bad Challenge</strong> — временная рассинхронизация токена Steam. Введите команду подключения повторно.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="rules">
+            <button class="faq-question-btn">
+              <span class="faq-question-text">Какие правила действуют на серверах AIMCORE?</span>
+              <span class="faq-arrow-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer-body">
+              <p>На всех игровых серверах действуют строгие киберспортивные стандарты:</p>
+              <ul class="faq-bullets-list">
+                <li><strong>Категорически запрещен любой сторонний софт (читы, радары, скрипты на банихоп)</strong>. Бан выдается навсегда по Steam ID и HWID без права на апелляцию.</li>
+                <li><strong>Запрещены оскорбления, токсичное поведение и спам звуками в микрофон</strong>. За нарушение выдается автоматический мут на 24 часа.</li>
+                <li><strong>Запрещено намеренное затягивание раундов</strong> на серверах Retake и Duels.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="connect">
+            <button class="faq-question-btn">
+              <span class="faq-question-text">Как связаться с администрацией платформы?</span>
+              <span class="faq-arrow-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-answer-body">
+              <p>Наша служба поддержки работает круглосуточно. Вы можете задать вопрос дежурному модератору в официальном Telegram-канале или создать тикет в Discord. Среднее время ответа — 5 минут.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="faq-empty-state" id="faq-empty-state" style="display: none;">
+          <h3 class="empty-title">Вопросы не найдены</h3>
+          <p class="empty-desc">Попробуйте изменить формулировку запроса или напишите в форму поддержки ниже</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-form-section">
+      <div class="container">
+        <div class="support-card">
+          <div class="support-header">
+            <h2 class="support-title">Не нашли ответ на свой вопрос?</h2>
+            <p class="support-subtitle">Опишите вашу проблему, и администраторы AIMCORE свяжутся с вами в течение нескольких минут</p>
+          </div>
+
+          <form class="support-form" id="support-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ticket-name" class="form-label">Ваш никнейм или Steam ID:</label>
+                <input type="text" id="ticket-name" class="form-input" placeholder="Например: s1mple или 76561198..." required>
+              </div>
+              <div class="form-group">
+                <label for="ticket-contact" class="form-label">Telegram или Email для ответа:</label>
+                <input type="text" id="ticket-contact" class="form-input" placeholder="@username или mail@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="ticket-text" class="form-label">Текст вопроса или описание проблемы:</label>
+              <textarea id="ticket-text" class="form-textarea" rows="4" placeholder="Подробно опишите, что произошло (номер сервера, ошибка консоли)..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit-ticket" id="btn-submit-ticket">
+              Отправить вопрос в поддержку
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast-notification" id="toast-notification">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toast-message">Команда скопирована!</div>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="assets/images/logo.png" alt="AIMCORE" class="footer-logo">
+        <div class="footer-legal">
+          <p>Copyright 2019-2026</p>
+          <p class="company-name">ООО “АИМКОРЕ”</p>
+          <p class="company-sub">ИНН 78031209301</p>
+          <p class="company-sub">ОГРН 12312294024230</p>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="servers.html" class="footer-link">Сервера</a>
+        <a href="premium.html" class="footer-link">Premium</a>
+        <a href="faq.html" class="footer-link">База знаний</a>
+        <a href="profile.html" class="footer-link">Личный кабинет</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="index.html" class="footer-link">О платформе</a>
+        <a href="faq.html" class="footer-link">Правила серверов</a>
+        <a href="faq.html" class="footer-link">Контакты</a>
+        <a href="faq.html" class="footer-link">Политика конфиденциальности</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="faq.html" class="footer-link">Лицензионное соглашение</a>
+        <a href="faq.html" class="footer-link">FAQ по подключению</a>
+        <a href="servers.html" class="footer-link">Мониторинг серверов</a>
+        <a href="https://t.me" class="footer-link" target="_blank" rel="noopener noreferrer">Поддержка в Telegram</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="social-links">
+        <a href="https://steamcommunity.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Steam">
+          <img src="assets/images/steam.png" alt="Steam">
+        </a>
+        <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="VK">
+          <img src="assets/images/vk.png" alt="VK">
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord">
+          <img src="assets/images/discord.png" alt="Discord">
+        </a>
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Telegram">
+          <img src="assets/images/telegram.png" alt="Telegram">
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+          <img src="assets/images/youtube.png" alt="YouTube">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/faq.js"></script>
+</body>
+</html>

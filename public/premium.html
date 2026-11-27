@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIMCORE — Premium Подписка CS2 | VIP-слоты, PRO-серверы и кастомные скины</title>
+  <meta name="description" content="Оформи подписку AIMCORE Premium. Резервные слоты на серверах CS2 16/16, доступ к PRO-хабам, кастомные скины и углубленная статистика стрельбы.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/premium.css">
+</head>
+<body>
+
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="nav-group nav-left">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="servers.html" class="nav-link">Сервера</a>
+        <a href="faq.html" class="nav-link">База знаний</a>
+      </div>
+
+      <a href="index.html" class="brand-logo" aria-label="AIMCORE Главная">
+        <img src="assets/images/logo.png" alt="AIMCORE Logo" class="logo-img">
+      </a>
+
+      <div class="nav-group nav-right">
+        <a href="premium.html" class="nav-link active">Premium</a>
+        <a href="profile.html" class="nav-link nav-btn-profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Кабинет
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Открыть меню">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mobile-link">Главная</a>
+      <a href="servers.html" class="mobile-link">Сервера</a>
+      <a href="premium.html" class="mobile-link active">Premium</a>
+      <a href="faq.html" class="mobile-link">База знаний</a>
+      <a href="profile.html" class="mobile-link">Личный кабинет</a>
+    </div>
+  </header>
+
+  <main class="premium-page-main">
+
+    <section class="premium-hero">
+      <div class="container premium-hero-container">
+        <div class="premium-hero-badge">VIP & PRO PRIVILEGES</div>
+        <h1 class="premium-title">
+          ПОДПИСКА <span class="accent-title">AIMCORE PREMIUM</span>
+        </h1>
+        <p class="premium-subtitle">
+          Забудь об очередях на переполненных серверах. Играй с киберспортсменами на закрытых PRO-хабах, ставь любые скины и прокачивай стрельбу на максимуме
+        </p>
+
+        <div class="billing-toggle-wrap">
+          <button class="billing-toggle-btn active" id="billing-btn-monthly">Оплата помесячно</button>
+          <button class="billing-toggle-btn" id="billing-btn-annual">
+            На 1 год
+            <span class="discount-pill">-35% скидка</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-cards-section">
+      <div class="container">
+        <div class="pricing-grid">
+
+          <div class="price-card" data-plan="1month">
+            <div class="plan-header">
+              <span class="plan-type">Стартовый</span>
+              <h3 class="plan-name">1 Месяц</h3>
+              <p class="plan-desc">Оптимальный выбор для знакомства со всеми возможностями платформы</p>
+            </div>
+
+            <div class="price-box">
+              <div class="price-val-wrap">
+                <span class="price-currency">₽</span>
+                <span class="price-amount" data-monthly="299" data-annual="249">299</span>
+                <span class="price-period">/ месяц</span>
+              </div>
+              <span class="price-note">Списание раз в месяц</span>
+            </div>
+
+            <ul class="plan-features-list">
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Резервный слот (вход 16/16)</span>
+              </li>
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Скины и ножи на серверах (!ws, !knife)</span>
+              </li>
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Иммунитет к авто-кику за AFK</span>
+              </li>
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Отключение рекламы на серверах</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-secondary btn-plan" data-plan-id="1m" data-price="299" data-name="1 Месяц Premium">
+              Выбрать тариф
+            </button>
+          </div>
+
+          <div class="price-card card-featured" data-plan="3months">
+            <div class="card-glow-layer"></div>
+            <div class="featured-badge">ПОПУЛЯРНЫЙ ВЫБОР</div>
+
+            <div class="plan-header">
+              <span class="plan-type accent">Киберспорт</span>
+              <h3 class="plan-name">3 Месяца</h3>
+              <p class="plan-desc">Для регулярных тренировок и быстрого роста рейтинга на Faceit</p>
+            </div>
+
+            <div class="price-box">
+              <div class="price-val-wrap">
+                <span class="price-currency">₽</span>
+                <span class="price-amount" data-monthly="699" data-annual="580">699</span>
+                <span class="price-period">/ 3 мес</span>
+              </div>
+              <span class="price-note">Всего 233 ₽ в месяц (экономия 200 ₽)</span>
+            </div>
+
+            <ul class="plan-features-list">
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Все привилегии базового тарифа</strong>
+              </li>
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Доступ к закрытым PRO-хабам (2500+ ELO)</span>
+              </li>
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Углубленный анализ точности и таймингов</span>
+              </li>
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Золотой статус в таблице игроков</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-primary btn-plan" data-plan-id="3m" data-price="699" data-name="3 Месяца Premium">
+              Оформить подписку
+            </button>
+          </div>
+
+          <div class="price-card" data-plan="12months">
+            <div class="featured-badge max-badge">МАКСИМАЛЬНАЯ ВЫГОДА</div>
+
+            <div class="plan-header">
+              <span class="plan-type">Годовой абонемент</span>
+              <h3 class="plan-name">12 Месяцев</h3>
+              <p class="plan-desc">Полный сезон соревновательной подготовки с максимальной скидкой</p>
+            </div>
+
+            <div class="price-box">
+              <div class="price-val-wrap">
+                <span class="price-currency">₽</span>
+                <span class="price-amount" data-monthly="2290" data-annual="1890">2290</span>
+                <span class="price-period">/ год</span>
+              </div>
+              <span class="price-note">Всего 190 ₽ в месяц (экономия более 1300 ₽)</span>
+            </div>
+
+            <ul class="plan-features-list">
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Полный доступ ко всей экосистеме AIMCORE</strong>
+              </li>
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Приоритетная линия технической поддержки 24/7</span>
+              </li>
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Участие во внутренних турнирах платформы</span>
+              </li>
+              <li>
+                <svg class="check-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Эксклюзивная плашка PRO в профиле</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-secondary btn-plan" data-plan-id="12m" data-price="2290" data-name="12 Месяцев Premium">
+              Оформить на год
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="privileges-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">
+            ЧТО ДАЕТ <span class="accent-title">PREMIUM</span>
+          </h2>
+          <p class="section-subtitle">
+            Все необходимые инструменты для комфортной тренировки без ограничений и очередей
+          </p>
+        </div>
+
+        <div class="privileges-grid">
+
+          <div class="privilege-card">
+            <div class="privilege-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="10 17 15 12 10 7"></polyline>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="privilege-title">Вход без очереди (16/16)</h3>
+            <p class="privilege-desc">
+              На каждом сервере зарезервированы VIP-слоты. Если на сервере заняты все места, вы подключаетесь мгновенно без ожидания.
+            </p>
+          </div>
+
+          <div class="privilege-card">
+            <div class="privilege-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7298f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m4.93 4.93 4.24 4.24"></path>
+                <path d="m14.83 9.17 4.24-4.24"></path>
+                <path d="m14.83 14.83 4.24 4.24"></path>
+                <path d="m9.17 14.83-4.24 4.24"></path>
+                <circle cx="12" cy="12" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="privilege-title">Закрытые PRO-серверы</h3>
+            <p class="privilege-desc">
+              Эксклюзивные кластеры серверов с доступом от 2500+ ELO, где тренируются профессиональные игроки и лидеры ладдеров.
+            </p>
+          </div>
+
+          <div class="privilege-card">
+            <div class="privilege-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#25efbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="privilege-title">Любые ножи и скины (!ws)</h3>
+            <p class="privilege-desc">
+              Полный гардероб оружия: Karambit, Butterfly, M9 Bayonet, любые перчатки и редкие скины прямо во время игры на сервере.
+            </p>
+          </div>
+
+          <div class="privilege-card">
+            <div class="privilege-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fe882e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="privilege-title">Углубленная телеметрия</h3>
+            <p class="privilege-desc">
+              Детальные графики точности стрельбы, время реакции до первого выстрела (TTK), процент хедшотов и тепловые карты попаданий.
+            </p>
+          </div>
+
+          <div class="privilege-card">
+            <div class="privilege-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="privilege-title">Чистый интерфейс</h3>
+            <p class="privilege-desc">
+              Полное отключение текстовых рекламных сообщений в чате серверов, звуковых оповещений и баннеров в интерфейсе.
+            </p>
+          </div>
+
+          <div class="privilege-card">
+            <div class="privilege-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7298f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="privilege-title">Приоритетная поддержка</h3>
+            <p class="privilege-desc">
+              Выделенная линия поддержки в Telegram и Discord. Ответ модератора платформы в течение 5 минут по любым вопросам.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">
+            СРАВНЕНИЕ <span class="accent-title">ТАРИФОВ</span>
+          </h2>
+        </div>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Возможность</th>
+                <th class="col-free">FREE</th>
+                <th class="col-premium">PREMIUM</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Доступ к публичным серверам Retake & DM</td>
+                <td><span class="table-check">Да</span></td>
+                <td><span class="table-check active">Да</span></td>
+              </tr>
+              <tr>
+                <td>Резервный слот (вход при 16/16)</td>
+                <td><span class="table-dash">—</span></td>
+                <td><span class="table-check active">Да</span></td>
+              </tr>
+              <tr>
+                <td>Закрытые PRO-кластеры серверов</td>
+                <td><span class="table-dash">—</span></td>
+                <td><span class="table-check active">Да</span></td>
+              </tr>
+              <tr>
+                <td>Выбор скинов оружия и ножей (!ws, !knife)</td>
+                <td><span class="table-dash">—</span></td>
+                <td><span class="table-check active">Да</span></td>
+              </tr>
+              <tr>
+                <td>Иммунитет к автокику за AFK</td>
+                <td><span class="table-dash">—</span></td>
+                <td><span class="table-check active">Да</span></td>
+              </tr>
+              <tr>
+                <td>Отключение рекламы в чате</td>
+                <td><span class="table-dash">—</span></td>
+                <td><span class="table-check active">Да</span></td>
+              </tr>
+              <tr>
+                <td>Выделенная поддержка 24/7</td>
+                <td><span class="table-dash">—</span></td>
+                <td><span class="table-check active">Да</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="payment-modal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">Оформление подписки</h3>
+          <p class="modal-subtitle" id="modal-plan-label">Тариф: 3 Месяца Premium</p>
+        </div>
+        <button class="modal-close" id="payment-modal-close" aria-label="Закрыть">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <label class="payment-group-label">Способ оплаты:</label>
+        <div class="payment-methods-grid">
+          <button class="payment-method-card active" data-method="sbp">
+            <div class="method-radio"></div>
+            <div class="method-info">
+              <span class="method-name">СБП (Быстрые платежи)</span>
+              <span class="method-sub">0% комиссии • Мгновенно по QR-коду</span>
+            </div>
+          </button>
+
+          <button class="payment-method-card" data-method="card">
+            <div class="method-radio"></div>
+            <div class="method-info">
+              <span class="method-name">Банковская карта</span>
+              <span class="method-sub">МИР, Visa, Mastercard</span>
+            </div>
+          </button>
+
+          <button class="payment-method-card" data-method="steam">
+            <div class="method-radio"></div>
+            <div class="method-info">
+              <span class="method-name">Скины CS2 / Steam Trade</span>
+              <span class="method-sub">Оплата предметами из инвентаря</span>
+            </div>
+          </button>
+        </div>
+
+        <div class="promo-box">
+          <label for="promo-input" class="promo-label">Промокод на скидку:</label>
+          <div class="promo-input-group">
+            <input type="text" id="promo-input" class="promo-input" placeholder="Например: AIM2026" autocomplete="off">
+            <button class="btn btn-secondary btn-apply-promo" id="btn-apply-promo">Применить</button>
+          </div>
+          <span class="promo-status" id="promo-status-msg"></span>
+        </div>
+
+        <div class="payment-summary-box">
+          <div class="summary-row">
+            <span>Стоимость:</span>
+            <span id="summary-original-price">699 ₽</span>
+          </div>
+          <div class="summary-row discount-row" id="summary-discount-row" style="display: none;">
+            <span>Скидка по промокоду:</span>
+            <span id="summary-discount-val">-10%</span>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="summary-row total-row">
+            <span>К оплате:</span>
+            <span class="total-amount" id="summary-total-price">699 ₽</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-pay-action" id="btn-submit-payment">
+          Оплатить подписку
+        </button>
+
+        <p class="payment-security-note">
+          Безопасная оплата через зашифрованное TLS-соединение. Доступ активируется мгновенно на ваш Steam ID.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-notification" id="toast-notification">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message" id="toast-message">Подписка успешно активирована!</div>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <img src="assets/images/logo.png" alt="AIMCORE" class="footer-logo">
+        <div class="footer-legal">
+          <p>Copyright 2019-2026</p>
+          <p class="company-name">ООО “АИМКОРЕ”</p>
+          <p class="company-sub">ИНН 78031209301</p>
+          <p class="company-sub">ОГРН 12312294024230</p>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="servers.html" class="footer-link">Сервера</a>
+        <a href="premium.html" class="footer-link">Premium</a>
+        <a href="faq.html" class="footer-link">База знаний</a>
+        <a href="profile.html" class="footer-link">Личный кабинет</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="index.html" class="footer-link">О платформе</a>
+        <a href="faq.html" class="footer-link">Правила серверов</a>
+        <a href="faq.html" class="footer-link">Контакты</a>
+        <a href="faq.html" class="footer-link">Политика конфиденциальности</a>
+      </div>
+
+      <div class="footer-nav-col">
+        <a href="faq.html" class="footer-link">Лицензионное соглашение</a>
+        <a href="faq.html" class="footer-link">FAQ по подключению</a>
+        <a href="servers.html" class="footer-link">Мониторинг серверов</a>
+        <a href="https://t.me" class="footer-link" target="_blank" rel="noopener noreferrer">Поддержка в Telegram</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="social-links">
+        <a href="https://steamcommunity.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Steam">
+          <img src="assets/images/steam.png" alt="Steam">
+        </a>
+        <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="VK">
+          <img src="assets/images/vk.png" alt="VK">
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord">
+          <img src="assets/images/discord.png" alt="Discord">
+        </a>
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Telegram">
+          <img src="assets/images/telegram.png" alt="Telegram">
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+          <img src="assets/images/youtube.png" alt="YouTube">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/premium.js"></script>
+</body>
+</html>

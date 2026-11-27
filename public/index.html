@@ -5,34 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIMCORE — Платформа для тренировки стрельбы в CS2</title>
   <meta name="description" content="Тренируйся. Доминируй. Побеждай. AIMCORE — платформа для тренировки стрельбы в CS2 с PRO-игроками, анализом тренера и персональными тренировками.">
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-  <!-- Google Fonts: Russo One & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Header / Navigation Bar -->
   <header class="navbar-wrapper">
     <nav class="navbar" id="navbar">
       <div class="nav-group nav-left">
         <a href="index.html" class="nav-link active">Главная</a>
-        <a href="catalog.html" class="nav-link">Каталог</a>
-        <a href="about.html" class="nav-link">О нас</a>
+        <a href="servers.html" class="nav-link">Сервера</a>
+        <a href="faq.html" class="nav-link">База знаний</a>
       </div>
 
       <a href="index.html" class="brand-logo" aria-label="AIMCORE Главная">
-        <img src="images/logo.png" alt="AIMCORE Logo" class="logo-img">
+        <img src="assets/images/logo.png" alt="AIMCORE Logo" class="logo-img">
       </a>
 
       <div class="nav-group nav-right">
-        <a href="contacts.html" class="nav-link">Контакты</a>
-        <a href="catalog.html" class="nav-link nav-btn-profile">
+        <a href="premium.html" class="nav-link">Premium</a>
+        <a href="profile.html" class="nav-link nav-btn-profile">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -48,35 +45,33 @@
       </button>
     </nav>
 
-    <!-- Mobile dropdown menu -->
     <div class="mobile-menu" id="mobile-menu">
       <a href="index.html" class="mobile-link active">Главная</a>
-      <a href="catalog.html" class="mobile-link">Каталог</a>
-      <a href="contacts.html" class="mobile-link">Контакты</a>
-      <a href="about.html" class="mobile-link">О нас</a>
-      <a href="catalog.html" class="mobile-link">Личный кабинет</a>
+      <a href="servers.html" class="mobile-link">Сервера</a>
+      <a href="premium.html" class="mobile-link">Premium</a>
+      <a href="faq.html" class="mobile-link">База знаний</a>
+      <a href="profile.html" class="mobile-link">Личный кабинет</a>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section with Fullscreen Background Highlight Video -->
+
     <section class="hero-section" id="hero">
       <div class="hero-backdrop">
-        <!-- High-speed CS2 Gameplay Video Background (Valve CDN + Local fallback) -->
+
         <video 
           class="video-background" 
           autoplay 
           muted 
           loop 
           playsinline 
-          poster="images/hero-bg.png"
+          poster="/assets/images/hero-bg.png"
           preload="auto">
           <source src="https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/cs2/thumbnails/weapons.webm" type="video/webm">
           <source src="https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/cs2/smokes_vid1.webm" type="video/webm">
-          
+          <source src="assets/videos/cs2-highlight.mp4" type="video/mp4">
         </video>
 
-        <!-- Dark cinematic overlay to ensure perfect contrast and text readability -->
         <div class="hero-overlay"></div>
       </div>
 
@@ -91,12 +86,11 @@
         </p>
 
         <div class="hero-actions">
-          <a href="catalog.html" class="btn btn-primary">Начать тренировку</a>
+          <a href="servers.html" class="btn btn-primary">Начать тренировку</a>
         </div>
       </div>
     </section>
 
-    <!-- Pro Players Section (Infinite Marquee floating right) -->
     <section class="pro-section" id="pro-players">
       <div class="container">
         <div class="section-header text-center">
@@ -109,231 +103,229 @@
         </div>
       </div>
 
-      <!-- Ticker Marquee Wrapper -->
       <div class="pro-marquee-container">
         <div class="pro-marquee-track" id="pro-marquee-track">
-          <!-- First Set of 14 Cards -->
-          <article class="pro-card offset-low" data-player="molodoy" data-hours="570 ч">
+
+          <div class="pro-card offset-low" data-player="molodoy" data-hours="570 ч">
             <span class="player-name">molodoy</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-molodoy.png" alt="molodoy" class="player-photo">
+              <img src="assets/images/player-molodoy.png" alt="molodoy" class="player-photo">
             </div>
             <div class="player-hours-badge">570 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="ropz" data-hours="810 ч">
+          <div class="pro-card offset-high" data-player="ropz" data-hours="810 ч">
             <span class="player-name">ropz</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-ropz.png" alt="ropz" class="player-photo">
+              <img src="assets/images/player-ropz.png" alt="ropz" class="player-photo">
             </div>
             <div class="player-hours-badge">810 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="b1t" data-hours="430 ч">
+          <div class="pro-card offset-low" data-player="b1t" data-hours="430 ч">
             <span class="player-name">b1t</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-b1t.png" alt="b1t" class="player-photo">
+              <img src="assets/images/player-b1t.png" alt="b1t" class="player-photo">
             </div>
             <div class="player-hours-badge">430 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="magnojez" data-hours="900 ч">
+          <div class="pro-card offset-high" data-player="magnojez" data-hours="900 ч">
             <span class="player-name">magnojez</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-magnojez.png" alt="magnojez" class="player-photo">
+              <img src="assets/images/player-magnojez.png" alt="magnojez" class="player-photo">
             </div>
             <div class="player-hours-badge">900 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="sh1ro" data-hours="250 ч">
+          <div class="pro-card offset-low" data-player="sh1ro" data-hours="250 ч">
             <span class="player-name">sh1ro</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-sh1ro.png" alt="sh1ro" class="player-photo">
+              <img src="assets/images/player-sh1ro.png" alt="sh1ro" class="player-photo">
             </div>
             <div class="player-hours-badge">250 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="kyousuke" data-hours="001 ч">
+          <div class="pro-card offset-high" data-player="kyousuke" data-hours="001 ч">
             <span class="player-name">kyousuke</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-kyousuke.png" alt="kyousuke" class="player-photo">
+              <img src="assets/images/player-kyousuke.png" alt="kyousuke" class="player-photo">
             </div>
             <div class="player-hours-badge">001 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="khaN" data-hours="550 ч">
+          <div class="pro-card offset-low" data-player="khaN" data-hours="550 ч">
             <span class="player-name">khaN</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-khan.png" alt="khaN" class="player-photo">
+              <img src="assets/images/player-khan.png" alt="khaN" class="player-photo">
             </div>
             <div class="player-hours-badge">550 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="mezii" data-hours="450 ч">
+          <div class="pro-card offset-high" data-player="mezii" data-hours="450 ч">
             <span class="player-name">mezii</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-mezii.png" alt="mezii" class="player-photo">
+              <img src="assets/images/player-mezii.png" alt="mezii" class="player-photo">
             </div>
             <div class="player-hours-badge">450 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="s1mple" data-hours="999 ч">
+          <div class="pro-card offset-low" data-player="s1mple" data-hours="999 ч">
             <span class="player-name">s1mple</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-s1mple.png" alt="s1mple" class="player-photo">
+              <img src="assets/images/player-s1mple.png" alt="s1mple" class="player-photo">
             </div>
             <div class="player-hours-badge">999 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="blameF" data-hours="350 ч">
+          <div class="pro-card offset-high" data-player="blameF" data-hours="350 ч">
             <span class="player-name">blameF</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-blamef.png" alt="blameF" class="player-photo">
+              <img src="assets/images/player-blamef.png" alt="blameF" class="player-photo">
             </div>
             <div class="player-hours-badge">350 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="Zywoo" data-hours="750 ч">
+          <div class="pro-card offset-low" data-player="Zywoo" data-hours="750 ч">
             <span class="player-name">Zywoo</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-zywoo.png" alt="Zywoo" class="player-photo">
+              <img src="assets/images/player-zywoo.png" alt="Zywoo" class="player-photo">
             </div>
             <div class="player-hours-badge">750 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="donk" data-hours="800 ч">
+          <div class="pro-card offset-high" data-player="donk" data-hours="800 ч">
             <span class="player-name">donk</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-donk.png" alt="donk" class="player-photo">
+              <img src="assets/images/player-donk.png" alt="donk" class="player-photo">
             </div>
             <div class="player-hours-badge">800 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="m0nesy" data-hours="510 ч">
+          <div class="pro-card offset-low" data-player="m0nesy" data-hours="510 ч">
             <span class="player-name">m0nesy</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-m0nesy.png" alt="m0nesy" class="player-photo">
+              <img src="assets/images/player-m0nesy.png" alt="m0nesy" class="player-photo">
             </div>
             <div class="player-hours-badge">510 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="w0nderful" data-hours="450 ч">
+          <div class="pro-card offset-high" data-player="w0nderful" data-hours="450 ч">
             <span class="player-name">w0nderful</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-wonderful.png" alt="w0nderful" class="player-photo">
+              <img src="assets/images/player-wonderful.png" alt="w0nderful" class="player-photo">
             </div>
             <div class="player-hours-badge">450 ч</div>
           </div>
 
-          <!-- Duplicate Set for Seamless Loop -->
-          <article class="pro-card offset-low" data-player="molodoy" data-hours="570 ч">
+          <div class="pro-card offset-low" data-player="molodoy" data-hours="570 ч">
             <span class="player-name">molodoy</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-molodoy.png" alt="molodoy" class="player-photo">
+              <img src="assets/images/player-molodoy.png" alt="molodoy" class="player-photo">
             </div>
             <div class="player-hours-badge">570 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="ropz" data-hours="810 ч">
+          <div class="pro-card offset-high" data-player="ropz" data-hours="810 ч">
             <span class="player-name">ropz</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-ropz.png" alt="ropz" class="player-photo">
+              <img src="assets/images/player-ropz.png" alt="ropz" class="player-photo">
             </div>
             <div class="player-hours-badge">810 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="b1t" data-hours="430 ч">
+          <div class="pro-card offset-low" data-player="b1t" data-hours="430 ч">
             <span class="player-name">b1t</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-b1t.png" alt="b1t" class="player-photo">
+              <img src="assets/images/player-b1t.png" alt="b1t" class="player-photo">
             </div>
             <div class="player-hours-badge">430 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="magnojez" data-hours="900 ч">
+          <div class="pro-card offset-high" data-player="magnojez" data-hours="900 ч">
             <span class="player-name">magnojez</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-magnojez.png" alt="magnojez" class="player-photo">
+              <img src="assets/images/player-magnojez.png" alt="magnojez" class="player-photo">
             </div>
             <div class="player-hours-badge">900 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="sh1ro" data-hours="250 ч">
+          <div class="pro-card offset-low" data-player="sh1ro" data-hours="250 ч">
             <span class="player-name">sh1ro</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-sh1ro.png" alt="sh1ro" class="player-photo">
+              <img src="assets/images/player-sh1ro.png" alt="sh1ro" class="player-photo">
             </div>
             <div class="player-hours-badge">250 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="kyousuke" data-hours="001 ч">
+          <div class="pro-card offset-high" data-player="kyousuke" data-hours="001 ч">
             <span class="player-name">kyousuke</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-kyousuke.png" alt="kyousuke" class="player-photo">
+              <img src="assets/images/player-kyousuke.png" alt="kyousuke" class="player-photo">
             </div>
             <div class="player-hours-badge">001 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="khaN" data-hours="550 ч">
+          <div class="pro-card offset-low" data-player="khaN" data-hours="550 ч">
             <span class="player-name">khaN</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-khan.png" alt="khaN" class="player-photo">
+              <img src="assets/images/player-khan.png" alt="khaN" class="player-photo">
             </div>
             <div class="player-hours-badge">550 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="mezii" data-hours="450 ч">
+          <div class="pro-card offset-high" data-player="mezii" data-hours="450 ч">
             <span class="player-name">mezii</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-mezii.png" alt="mezii" class="player-photo">
+              <img src="assets/images/player-mezii.png" alt="mezii" class="player-photo">
             </div>
             <div class="player-hours-badge">450 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="s1mple" data-hours="999 ч">
+          <div class="pro-card offset-low" data-player="s1mple" data-hours="999 ч">
             <span class="player-name">s1mple</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-s1mple.png" alt="s1mple" class="player-photo">
+              <img src="assets/images/player-s1mple.png" alt="s1mple" class="player-photo">
             </div>
             <div class="player-hours-badge">999 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="blameF" data-hours="350 ч">
+          <div class="pro-card offset-high" data-player="blameF" data-hours="350 ч">
             <span class="player-name">blameF</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-blamef.png" alt="blameF" class="player-photo">
+              <img src="assets/images/player-blamef.png" alt="blameF" class="player-photo">
             </div>
             <div class="player-hours-badge">350 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="Zywoo" data-hours="750 ч">
+          <div class="pro-card offset-low" data-player="Zywoo" data-hours="750 ч">
             <span class="player-name">Zywoo</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-zywoo.png" alt="Zywoo" class="player-photo">
+              <img src="assets/images/player-zywoo.png" alt="Zywoo" class="player-photo">
             </div>
             <div class="player-hours-badge">750 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="donk" data-hours="800 ч">
+          <div class="pro-card offset-high" data-player="donk" data-hours="800 ч">
             <span class="player-name">donk</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-donk.png" alt="donk" class="player-photo">
+              <img src="assets/images/player-donk.png" alt="donk" class="player-photo">
             </div>
             <div class="player-hours-badge">800 ч</div>
           </div>
 
-          <article class="pro-card offset-low" data-player="m0nesy" data-hours="510 ч">
+          <div class="pro-card offset-low" data-player="m0nesy" data-hours="510 ч">
             <span class="player-name">m0nesy</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-m0nesy.png" alt="m0nesy" class="player-photo">
+              <img src="assets/images/player-m0nesy.png" alt="m0nesy" class="player-photo">
             </div>
             <div class="player-hours-badge">510 ч</div>
           </div>
 
-          <article class="pro-card offset-high" data-player="w0nderful" data-hours="450 ч">
+          <div class="pro-card offset-high" data-player="w0nderful" data-hours="450 ч">
             <span class="player-name">w0nderful</span>
             <div class="player-avatar-wrap">
-              <img src="images/player-wonderful.png" alt="w0nderful" class="player-photo">
+              <img src="assets/images/player-wonderful.png" alt="w0nderful" class="player-photo">
             </div>
             <div class="player-hours-badge">450 ч</div>
           </div>
@@ -341,13 +333,12 @@
       </div>
     </section>
 
-    <!-- Features Showcase Section (Compact & Proportional) -->
     <section class="features-section" id="features">
       <div class="container features-container">
-        <!-- Feature 1: Online status -->
+
         <div class="feature-row">
           <div class="feature-widget-box">
-            <img src="images/widget-online.png" alt="Смотри кто играет онлайн" class="feature-img">
+            <img src="assets/images/widget-online.png" alt="Смотри кто играет онлайн" class="feature-img">
           </div>
           <div class="feature-text-box">
             <h3 class="feature-title">Смотри кто играет онлайн</h3>
@@ -355,21 +346,19 @@
           </div>
         </div>
 
-        <!-- Feature 2: Invite to lobby -->
         <div class="feature-row feature-row-reverse">
           <div class="feature-text-box feature-text-right">
             <h3 class="feature-title">Приглашай играть</h3>
             <p class="feature-desc">Зови друзей прямо с сайта: в лобби или сразу на сервер</p>
           </div>
           <div class="feature-widget-box">
-            <img src="images/widget-invite.png" alt="Приглашай играть" class="feature-img">
+            <img src="assets/images/widget-invite.png" alt="Приглашай играть" class="feature-img">
           </div>
         </div>
 
-        <!-- Feature 3: Leaderboard -->
         <div class="feature-row">
           <div class="feature-widget-box">
-            <img src="images/widget-leaderboard.png" alt="Соревнуйся в лидерборде" class="feature-img">
+            <img src="assets/images/widget-leaderboard.png" alt="Соревнуйся в лидерборде" class="feature-img">
           </div>
           <div class="feature-text-box">
             <h3 class="feature-title">Соревнуйся в лидерборде</h3>
@@ -379,25 +368,23 @@
       </div>
     </section>
 
-    <!-- Stats Banner (Clean, No Harsh Borders) -->
     <section class="stats-banner" id="stats">
       <div class="container stats-grid">
-        <article class="stat-item">
+        <div class="stat-item">
           <div class="stat-number" id="stat-players">750,000+</div>
           <div class="stat-label">игроков в AIMCORE</div>
         </div>
-        <article class="stat-item">
+        <div class="stat-item">
           <div class="stat-number" id="stat-matches">8 миллионов +</div>
           <div class="stat-label">матчей сыграно</div>
         </div>
-        <article class="stat-item">
+        <div class="stat-item">
           <div class="stat-number" id="stat-ratings">400,00+</div>
           <div class="stat-label">оценок</div>
         </div>
       </div>
     </section>
 
-    <!-- Training Cycle Section (More Compact & No Borders) -->
     <section class="cycle-section" id="cycle">
       <div class="container cycle-container">
         <div class="cycle-header">
@@ -409,60 +396,54 @@
           </p>
         </div>
 
-        <!-- 4 Step Cards -->
         <div class="steps-grid">
-          <article class="step-card step-red">
+          <div class="step-card step-red">
             <div class="step-num">1</div>
             <h4 class="step-name">Сыграйте матч</h4>
             <p class="step-text">Вставайте в очередь против других игроков, в одиночку или с друзьями. Тренер анализирует каждый бой.</p>
           </div>
 
-          <article class="step-card step-orange">
+          <div class="step-card step-orange">
             <div class="step-num">2</div>
             <h4 class="step-name">Анализ</h4>
             <p class="step-text">Тренер анализирует ваш матч, находит плохие привычки и объясняет, почему вы проигрываете раунды.</p>
           </div>
 
-          <article class="step-card step-blue">
+          <div class="step-card step-blue">
             <div class="step-num">3</div>
             <h4 class="step-name">Обучение</h4>
             <p class="step-text">Короткий совет покажет вам правильную игру, чтобы вы точно знали, как стать лучше.</p>
           </div>
 
-          <article class="step-card step-cyan">
+          <div class="step-card step-cyan">
             <div class="step-num">4</div>
             <h4 class="step-name">Практика</h4>
             <p class="step-text">Тренер создает персональную программу тренировок, разработанную только для вас, на основе того, над чем нужно работать.</p>
           </div>
         </div>
 
-        <!-- Loop note -->
         <div class="cycle-footer">
-          <img src="images/rotate.png" alt="Повтор" class="rotate-icon">
+          <img src="assets/images/rotate.png" alt="Повтор" class="rotate-icon">
           <span class="cycle-footer-text">Затем снова вставайте в очередь и продолжайте совершенствоваться.</span>
         </div>
       </div>
     </section>
 
-    <!-- Ready to Play / Interactive CS2 Card Section -->
     <section class="cta-section" id="play-cta">
       <div class="container cta-container">
         <h2 class="cta-heading">ГОТОВ К ИГРЕ?</h2>
-        
+
         <p class="cta-subheading">Нажми на карточку, чтобы перейти к тренировке</p>
 
-        <!-- Big CS2 Interactive Poster with Soldier Hover Pop-out -->
         <div class="poster-card-wrapper">
           <div class="poster-card" id="cs2-interactive-card" role="button" tabindex="0" aria-label="Перейти к игре CS2">
-            <!-- Background Image -->
-            <img src="images/cs2-card-bg.png" alt="Counter Strike 2 Background" class="poster-bg">
-            
-            <!-- Soldier Cutout Layer (Animates & Scales on Hover) -->
+
+            <img src="assets/images/cs2-card-bg.png" alt="Counter Strike 2 Background" class="poster-bg">
+
             <div class="soldier-cutout-wrap">
-              <img src="images/cs2-soldier.png" alt="CS2 Soldier" class="soldier-img">
+              <img src="assets/images/cs2-soldier.png" alt="CS2 Soldier" class="soldier-img">
             </div>
-            
-            <!-- Online Counter Badge -->
+
             <div class="online-badge">
               <span class="online-count">450,000</span>
               <span class="online-label">онлайн</span>
@@ -473,11 +454,10 @@
     </section>
   </main>
 
-  <!-- Footer (Clean, No Cyan Border) -->
   <footer class="footer" id="footer">
     <div class="container footer-container">
       <div class="footer-brand-col">
-        <img src="images/logo.png" alt="AIMCORE" class="footer-logo">
+        <img src="assets/images/logo.png" alt="AIMCORE" class="footer-logo">
         <div class="footer-legal">
           <p>Copyright 2019-2026</p>
           <p class="company-name">ООО “АИМКОРЕ”</p>
@@ -487,49 +467,48 @@
       </div>
 
       <div class="footer-nav-col">
-        <a href="catalog.html" class="footer-link">Сервера</a>
-        <a href="catalog.html" class="footer-link">Premium</a>
-        <a href="about.html" class="footer-link">База знаний</a>
-        <a href="catalog.html" class="footer-link">Личный кабинет</a>
+        <a href="servers.html" class="footer-link">Сервера</a>
+        <a href="premium.html" class="footer-link">Premium</a>
+        <a href="faq.html" class="footer-link">База знаний</a>
+        <a href="profile.html" class="footer-link">Личный кабинет</a>
       </div>
 
       <div class="footer-nav-col">
-        <a href="/#pro-players" class="footer-link">PRO-Игроки</a>
-        <a href="/#cycle" class="footer-link">О платформе</a>
-        <a href="about.html" class="footer-link">Правила серверов</a>
-        <a href="about.html" class="footer-link">Контакты</a>
+        <a href="index.html#pro-players" class="footer-link">PRO-Игроки</a>
+        <a href="index.html#cycle" class="footer-link">О платформе</a>
+        <a href="faq.html" class="footer-link">Правила серверов</a>
+        <a href="faq.html" class="footer-link">Контакты</a>
       </div>
 
       <div class="footer-nav-col">
-        <a href="about.html" class="footer-link">Политика конфиденциальности</a>
-        <a href="about.html" class="footer-link">Лицензионное соглашение</a>
-        <a href="about.html" class="footer-link">FAQ по подключению</a>
+        <a href="faq.html" class="footer-link">Политика конфиденциальности</a>
+        <a href="faq.html" class="footer-link">Лицензионное соглашение</a>
+        <a href="faq.html" class="footer-link">FAQ по подключению</a>
         <a href="https://t.me" class="footer-link" target="_blank" rel="noopener noreferrer">Поддержка в Telegram</a>
       </div>
     </div>
 
-    <!-- Social links row -->
     <div class="container footer-bottom">
       <div class="social-links">
         <a href="https://steamcommunity.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Steam">
-          <img src="images/steam.png" alt="Steam">
+          <img src="assets/images/steam.png" alt="Steam">
         </a>
         <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="VK">
-          <img src="images/vk.png" alt="VK">
+          <img src="assets/images/vk.png" alt="VK">
         </a>
         <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord">
-          <img src="images/discord.png" alt="Discord">
+          <img src="assets/images/discord.png" alt="Discord">
         </a>
         <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Telegram">
-          <img src="images/telegram.png" alt="Telegram">
+          <img src="assets/images/telegram.png" alt="Telegram">
         </a>
         <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
-          <img src="images/youtube.png" alt="YouTube">
+          <img src="assets/images/youtube.png" alt="YouTube">
         </a>
       </div>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
