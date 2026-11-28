@@ -289,8 +289,8 @@
 .status-indicator-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: clamp(6px, 0.69vw, 10px);
+  margin-bottom: clamp(5px, 0.56vw, 8px);
 }
 
 .status-dot {
@@ -333,7 +333,7 @@
 .check-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: clamp(7px, 0.83vw, 12px);
   font-family: var(--font-inter);
   font-size: clamp(12px, 2.4vw, 13.5px);
   color: var(--text-gray-light);
@@ -348,7 +348,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: clamp(11px, 0.9vw, 13px);
   font-weight: 700;
   flex-shrink: 0;
   line-height: 1;
@@ -392,7 +392,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: clamp(10px, 1.11vw, 16px);
   padding-bottom: clamp(12px, 2.5vw, 16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
@@ -495,12 +495,12 @@
   right: clamp(16px, 4vw, 32px);
   background: #151a24;
   color: #ffffff;
-  padding: 12px clamp(16px, 3vw, 22px);
+  padding: clamp(7px, 0.83vw, 12px) clamp(16px, 3vw, 22px);
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.65), 0 0 16px rgba(0, 229, 255, 0.25);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: clamp(7px, 0.83vw, 12px);
   z-index: 9999;
   transform: translateY(120px);
   opacity: 0;
@@ -525,7 +525,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: clamp(11px, 0.9vw, 13px);
   flex-shrink: 0;
 }
 
@@ -555,7 +555,7 @@
   letter-spacing: 2px;
   color: var(--accent-cyan);
   background: rgba(0, 229, 255, 0.08);
-  padding: 6px 16px;
+  padding: clamp(4px, 0.42vw, 6px) clamp(10px, 1.11vw, 16px);
   border-radius: 20px;
   margin-bottom: clamp(12px, 2.5vw, 18px);
 }
@@ -581,7 +581,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: clamp(7px, 0.83vw, 12px);
   width: 100%;
   max-width: 360px;
 }
@@ -590,9 +590,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: clamp(7px, 0.83vw, 12px);
   width: 100%;
-  padding: clamp(14px, 3vw, 16px) 24px;
+  padding: clamp(14px, 3vw, 16px) clamp(14px, 1.67vw, 24px);
   background: #171a21;
   color: #ffffff;
   border-radius: 12px;
@@ -618,7 +618,7 @@
 
 .btn-demo-auth {
   width: 100%;
-  padding: 12px 20px;
+  padding: clamp(7px, 0.83vw, 12px) clamp(12px, 1.39vw, 20px);
   font-size: clamp(12px, 2.2vw, 13px);
   font-family: var(--font-inter);
   font-weight: 600;
@@ -650,7 +650,7 @@
   font-size: clamp(11px, 2vw, 12px);
   color: var(--text-gray-desc);
   background: rgba(255, 255, 255, 0.03);
-  padding: 6px 14px;
+  padding: clamp(4px, 0.42vw, 6px) clamp(8px, 0.97vw, 14px);
   border-radius: 12px;
 }
 
@@ -660,7 +660,7 @@
   font-family: var(--font-inter);
   font-weight: 600;
   font-size: clamp(11.5px, 2vw, 12.5px);
-  padding: 8px 16px;
+  padding: clamp(5px, 0.56vw, 8px) clamp(10px, 1.11vw, 16px);
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -704,12 +704,12 @@
 
 @media (max-width: 425px) {
   .profile-container {
-    padding: 0 14px;
-    gap: 18px;
+    padding: 0 clamp(8px, 0.97vw, 14px);
+    gap: clamp(11px, 1.25vw, 18px);
   }
 
   .profile-hero-card {
-    padding: 20px 14px;
+    padding: clamp(12px, 1.39vw, 20px) clamp(8px, 0.97vw, 14px);
   }
 
   .profile-avatar-wrap {
@@ -719,19 +719,24 @@
 
   .profile-stats-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: clamp(6px, 0.69vw, 10px);
   }
 
   .stat-widget-card {
-    padding: 12px 14px;
+    padding: clamp(7px, 0.83vw, 12px) clamp(8px, 0.97vw, 14px);
   }
 
   .profile-sub-panel,
   .profile-settings-panel {
-    padding: 18px 14px;
+    padding: clamp(11px, 1.25vw, 18px) clamp(8px, 0.97vw, 14px);
   }
 
   .setting-item {
-    gap: 10px;
+    gap: clamp(6px, 0.69vw, 10px);
   }
+}
+
+@media (max-width: 1024px) {
+  .profile-grid { grid-template-columns: 1fr; }
+  .profile-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

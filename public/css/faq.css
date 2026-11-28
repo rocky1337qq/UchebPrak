@@ -97,7 +97,7 @@
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  font-size: 13px;
+  font-size: clamp(11px, 0.9vw, 13px);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -181,7 +181,7 @@
   border: none;
   cursor: pointer;
   text-align: left;
-  gap: 16px;
+  gap: clamp(10px, 1.11vw, 16px);
 }
 
 .faq-question-text {
@@ -234,10 +234,10 @@
 .faq-steps-list,
 .faq-bullets-list {
   padding-left: 20px;
-  margin: 12px 0;
+  margin: clamp(7px, 0.83vw, 12px) 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: clamp(5px, 0.56vw, 8px);
 }
 
 .code-snippet-box {
@@ -245,10 +245,10 @@
   align-items: center;
   justify-content: space-between;
   background: rgba(10, 14, 23, 0.8);
-  padding: 10px 16px;
+  padding: clamp(6px, 0.69vw, 10px) clamp(10px, 1.11vw, 16px);
   border-radius: 12px;
-  margin-top: 14px;
-  gap: 12px;
+  margin-top: clamp(8px, 0.97vw, 14px);
+  gap: clamp(7px, 0.83vw, 12px);
 }
 
 .code-text {
@@ -260,11 +260,11 @@
 .btn-copy-code {
   font-family: var(--font-inter);
   font-weight: 600;
-  font-size: 12px;
+  font-size: clamp(11px, 0.83vw, 12px);
   color: var(--text-white);
   background: rgba(114, 152, 248, 0.2);
   border: none;
-  padding: 6px 14px;
+  padding: clamp(4px, 0.42vw, 6px) clamp(8px, 0.97vw, 14px);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -277,21 +277,21 @@
 
 .faq-empty-state {
   text-align: center;
-  padding: 40px 20px;
+  padding: clamp(24px, 2.78vw, 40px) clamp(12px, 1.39vw, 20px);
   max-width: 500px;
   margin: 0 auto;
 }
 
 .empty-title {
   font-family: var(--font-russo);
-  font-size: 20px;
+  font-size: clamp(14px, 1.39vw, 20px);
   color: var(--text-white);
-  margin-bottom: 8px;
+  margin-bottom: clamp(5px, 0.56vw, 8px);
 }
 
 .empty-desc {
   font-family: var(--font-inter);
-  font-size: 14px;
+  font-size: clamp(11px, 0.97vw, 14px);
   color: var(--text-gray-desc);
 }
 
@@ -318,7 +318,7 @@
   font-family: var(--font-russo);
   font-size: clamp(20px, 4.5vw, 28px);
   color: var(--text-white);
-  margin-bottom: 8px;
+  margin-bottom: clamp(5px, 0.56vw, 8px);
 }
 
 .support-subtitle {
@@ -344,12 +344,12 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: clamp(4px, 0.42vw, 6px);
 }
 
 .form-label {
   font-family: var(--font-inter);
-  font-size: 13px;
+  font-size: clamp(11px, 0.9vw, 13px);
   font-weight: 500;
   color: var(--text-gray-light);
 }
@@ -383,7 +383,7 @@
   border-radius: 16px;
   font-size: clamp(14px, 3vw, 15px);
   cursor: pointer;
-  margin-top: 6px;
+  margin-top: clamp(4px, 0.42vw, 6px);
 }
 
 @media (max-width: 680px) {
@@ -394,7 +394,7 @@
 
 @media (max-width: 425px) {
   .container {
-    padding: 0 14px;
+    padding: 0 clamp(8px, 0.97vw, 14px);
   }
 
   .faq-hero-badge {
@@ -403,8 +403,8 @@
   }
 
   .faq-question-btn {
-    padding: 14px 14px;
-    gap: 10px;
+    padding: clamp(8px, 0.97vw, 14px) clamp(8px, 0.97vw, 14px);
+    gap: clamp(6px, 0.69vw, 10px);
   }
 
   .faq-question-text {
@@ -417,14 +417,14 @@
   }
 
   .faq-answer-body {
-    padding: 0 14px 16px;
-    font-size: 13px;
+    padding: 0 clamp(8px, 0.97vw, 14px) clamp(10px, 1.11vw, 16px);
+    font-size: clamp(11px, 0.9vw, 13px);
   }
 
   .code-snippet-box {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: clamp(5px, 0.56vw, 8px);
   }
 
   .btn-copy-code {
@@ -433,11 +433,19 @@
   }
 
   .support-card {
-    padding: 20px 14px;
+    padding: clamp(12px, 1.39vw, 20px) clamp(8px, 0.97vw, 14px);
     border-radius: 20px;
   }
 
   .btn-submit-ticket {
     width: 100%;
   }
+}
+
+@media (max-width: 1024px) {
+  .faq-container { padding: 0 clamp(14px, 3vw, 24px); }
+}
+
+@media (max-width: 768px) {
+  .faq-pills { flex-wrap: wrap; justify-content: center; }
 }
